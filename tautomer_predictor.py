@@ -562,12 +562,12 @@ class TautomerPredictor:
             tier = 4
             tier_name = "Tier 4 (High-Risk Aromatic Breakdown)"
             domain = "Poisoned Domain (Physics Collapse)"
-            expected_mae = 5.25
+            expected_mae = 5.14
             confidence = "Low / Caution"
             message = (
                 "[!] High-Risk Zone (Tier 4): Aromaticity transition detected (|ΔN_aro| > 0). "
                 "Resonance stabilization energy is asymmetric across isomers, breaking semi-empirical "
-                "error cancellation (benchmark MAE ~ 5.25 kcal/mol). "
+                "error cancellation (benchmark MAE = 5.14 kcal/mol, median 4.06 kcal/mol, RMSE = 6.73 kcal/mol). "
                 "Recommendation: Route to high-level DFT expert system."
             )
         elif strict_cbh2:
@@ -575,12 +575,12 @@ class TautomerPredictor:
             tier = 1
             tier_name = "Tier 1 (Strict CBH-2 Homodesmotic Golden Domain)"
             domain = "Strict CBH-2 Golden Zone (Raghavachari Homodesmotic)"
-            expected_mae = 1.30
+            expected_mae = 1.29
             confidence = "Ultra-High (Chemical Accuracy Regime)"
             message = (
                 "[***] Ultra-High Confidence (Tier 1): Strict CBH-2 Homodesmotic criterion satisfied! "
                 "Aromaticity, atom hybridizations, and exact bond-types are 100% mirrored across tautomers. "
-                "Systematic errors cancel out seamlessly (benchmark MAE ~ 1.30 kcal/mol, median 0.99 kcal/mol). "
+                "Systematic errors cancel out seamlessly (benchmark MAE = 1.29 kcal/mol, median 1.15 kcal/mol). "
                 "Recommendation: Ideal for high-precision virtual screening and quantitative binding affinity."
             )
         elif min_arorings >= 1:

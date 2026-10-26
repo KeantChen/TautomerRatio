@@ -53,8 +53,8 @@ python predict.py --smi1 "CC(=O)C1=C(O)CCC1" --smi2 "C/C(O)=C1\CCCC1=O"
 ------------------------------------------------------------------------------
   [Triage Tier]: Tier 1 (Strict CBH-2 Homodesmotic Golden Domain)
   [Domain]:      Strict CBH-2 Golden Zone (Raghavachari Homodesmotic)
-  [Expected MAE]: ~1.30 kcal/mol  |  Confidence: Ultra-High (Chemical Accuracy Regime)
-  [Diagnostic]:  [***] Ultra-High Confidence (Tier 1): Strict CBH-2 Homodesmotic criterion satisfied! Aromaticity, atom hybridizations, and exact bond-types are 100% mirrored across tautomers. Systematic errors cancel out seamlessly (benchmark MAE ~ 1.30 kcal/mol, median 0.99 kcal/mol). Recommendation: Ideal for high-precision virtual screening and quantitative binding affinity.
+  [Expected MAE]: ~1.29 kcal/mol  |  Confidence: Ultra-High (Chemical Accuracy Regime)
+  [Diagnostic]:  [***] Ultra-High Confidence (Tier 1): Strict CBH-2 Homodesmotic criterion satisfied! Aromaticity, atom hybridizations, and exact bond-types are 100% mirrored across tautomers. Systematic errors cancel out seamlessly (benchmark MAE = 1.29 kcal/mol, median 1.15 kcal/mol). Recommendation: Ideal for high-precision virtual screening and quantitative binding affinity.
 ------------------------------------------------------------------------------
   [Multi-Tower Predictions] (Calibrated Free Energy & Ratio):
   [1] Tower A (xTB-only) [RECOMMENDED]:
@@ -187,8 +187,8 @@ python predict.py --smi1 "Oc1ccccc1" --smi2 "O=C1C=CCC=C1"
 ------------------------------------------------------------------------------
   [Triage Tier]: Tier 4 (High-Risk Aromatic Breakdown)
   [Domain]:      Poisoned Domain (Physics Collapse)
-  [Expected MAE]: ~5.25 kcal/mol  |  Confidence: Low / Caution
-  [Diagnostic]:  [!] High-Risk Zone (Tier 4): Aromaticity transition detected (|ΔN_aro| > 0). Resonance stabilization energy is asymmetric across isomers, breaking semi-empirical error cancellation (benchmark MAE ~ 5.25 kcal/mol). Recommendation: Route to high-level DFT expert calculation.
+  [Expected MAE]: ~5.14 kcal/mol  |  Confidence: Low / Caution
+  [Diagnostic]:  [!] High-Risk Zone (Tier 4): Aromaticity transition detected (|ΔN_aro| > 0). Resonance stabilization energy is asymmetric across isomers, breaking semi-empirical error cancellation (benchmark MAE = 5.14 kcal/mol, median 4.06 kcal/mol, RMSE = 6.73 kcal/mol). Recommendation: Route to high-level DFT expert calculation.
   [Bond Shifts]: C-O_DOUBLE: Delta=1, C-C_SINGLE: Delta=5, C-C_AROMATIC: Delta=6, C-C_DOUBLE: Delta=1, C-O_SINGLE: Delta=1
 ------------------------------------------------------------------------------
   [Multi-Tower Predictions] (Calibrated Free Energy & Ratio):
@@ -205,7 +205,7 @@ python predict.py --smi1 "Oc1ccccc1" --smi2 "O=C1C=CCC=C1"
 
 | Tier | System | SMILES A $\to$ SMILES B | 2D Topological Feature | Output Ratio | Major | Expected MAE | Actionable Guidance |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Tier 1** | Enol-Enol | `CC(=O)C1=C(O)CCC1` $\to$ `C/C(O)=C1\CCCC1=O` | CBH-2 Homodesmotic | $1 : 1.70$ (Exp $1 : 3.98$) | **B (63.0%)** | $\mathbf{1.30}\text{ kcal/mol}$ | Ultra-High Confidence |
+| **Tier 1** | Enol-Enol | `CC(=O)C1=C(O)CCC1` $\to$ `C/C(O)=C1\CCCC1=O` | CBH-2 Homodesmotic | $1 : 1.70$ (Exp $1 : 3.98$) | **B (63.0%)** | $\mathbf{1.29}\text{ kcal/mol}$ | Ultra-High Confidence |
 | **Tier 2** | 2-Pyridone | `Oc1ccccn1` $\to$ `O=c1cccc[nH]1` | Aromatic Ring $\ge 1$ | $1 : 36.38$ | **B (97.3%)** | $\mathbf{1.81}\text{ kcal/mol}$ | Industrial Virtual Screen |
 | **Tier 3** | Acetylacetone | `CC(=O)CC(=O)C` $\to$ `CC(=O)C=C(O)C` | Aromatic Ring $= 0$ | $4622 : 1$ | **A (99.9%)** | $\mathbf{2.64}\text{ kcal/mol}$ | General Preference Rank |
-| **Tier 4** | Phenol | `Oc1ccccc1` $\to$ `O=C1C=CCC=C1` | $|\Delta N_{\text{aro}}| > 0$ | Route to DFT | **A (100%)** | $\mathbf{5.25}\text{ kcal/mol}$ | Route to High-Level DFT |
+| **Tier 4** | Phenol | `Oc1ccccc1` $\to$ `O=C1C=CCC=C1` | $|\Delta N_{\text{aro}}| > 0$ | Route to DFT | **A (100%)** | $\mathbf{5.14}\text{ kcal/mol}$ | Route to High-Level DFT |
