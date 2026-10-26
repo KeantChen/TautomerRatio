@@ -60,10 +60,10 @@ GXTB_COLS = [
     "gxtb_q_max", "gxtb_q_min", "gxtb_q_delta"
 ]
 
-# Calibration factors fitted on SAMPL2 benchmark (y = k * x)
-K_X = 0.56825  # Tower A (xTB)
-K_G = 0.58046  # Tower B (g-xTB)
-K_M = 0.57101  # Tower C (Mixed Fusion)
+# Calibration factors fitted on SAMPL2 benchmark (y = k * x, Manuscript Table 2)
+K_X = 0.575  # Tower A (xTB)
+K_G = 0.576  # Tower B (g-xTB)
+K_M = 0.577  # Tower C (Mixed Fusion)
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_MODEL_PATH = os.path.join(CURRENT_DIR, "models", "hydra_painn_best.pth")
