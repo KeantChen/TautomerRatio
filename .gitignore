@@ -1,0 +1,37 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local backup folder (do not push private backup to GitHub)
+backup/
+
+# C libraries / build artifacts
+*.so
+*.dylib
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE & Editor configs
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Output & temporary runtime files
+*.xyz
+*.log
+wbo
+xtbopt.*
+charges
+.xtbtopo.*
+mol.xyz
+predictions.csv
+test_output*.csv

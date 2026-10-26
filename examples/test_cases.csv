@@ -1,0 +1,9 @@
+id,name,tautomer1,tautomer2,expected_tier,expected_domain,dG_exp,notes
+CASE_01,Acetylcyclopentanone Enol-Enol,CC(=O)C1=C(O)CCC1,C/C(O)=C1\CCCC1=O,1,Strict CBH-2 Golden Zone,-0.10,Strict CBH-2 homodesmotic pair; exact bond-types and hybridizations 100% conserved across isomers.
+CASE_02,2-Pyridone / 2-Hydroxypyridine,OC1=CC=CC=N1,O=C1NC=CC=C1,2,Standard Aromatic Scaffold Comfort Zone,-2.60,Prototypical lactam-lactim pair on rigid aromatic pyridine ring.
+CASE_03,2-Mercaptopyridine (Thione-Thiol),Sc1ccccn1,S=c1cccc[nH]1,2,Standard Aromatic Scaffold Comfort Zone,-3.80,Thione-thiol aromatic pair; sulfur-nitrogen proton migration.
+CASE_04,2-Aminopyridine (Amine-Imine),Nc1ccccn1,N=c1cccc[nH]1,2,Standard Aromatic Scaffold Comfort Zone,7.10,Exocyclic amino/imino shift on pyridine scaffold.
+CASE_05,Ethyl acetoacetate (Aliphatic Keto-Enol),CCOC(=O)CC(=O)C,CCOC(=O)C=C(C)O,3,Flexible Aliphatic Comfort Zone,0.95,Aliphatic ester keto-enol with high conformational flexibility (0 aromatic rings).
+CASE_06,Phenol / Cyclohexadienone,Oc1ccccc1,O=C1C=CC=CC1,4,High-Risk Aromatic Breakdown,14.00,Aromaticity collapse (|ΔN_aro| = 6); severe resonance imbalance.
+CASE_07,Resorcinol Keto-Enol,Oc1cccc(O)c1,O=C1C=CC=C(O)C1,4,High-Risk Aromatic Breakdown,12.50,Loss of benzene aromatic sextet; flagged for DFT expert routing.
+CASE_08,Wieder CBH-Taut Benchmark,Cc1cc(O)nc(C)n1,Cc1cc(=O)[nH]c(C)n1,2,Standard Aromatic Scaffold Comfort Zone,-2.40,Dimethylpyrimidine lactam-lactim; benchmark pair from Wieder et al.
