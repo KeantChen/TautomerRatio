@@ -2,7 +2,11 @@
 
 > **Languages / 语言版本 / Langues** : [English](README.md) | [中文 (Chinese)](README_CN.md) | [Français (French)](README_FR.md)
 
-Hydra-PaiNN is an open-source, physics-informed machine learning pipeline for predicting tautomeric free energy differences ($\Delta G_{\text{aq}}$), equilibrium constants ($K_{\text{eq}}$), and Boltzmann population distributions in aqueous solution.
+Hydra-PaiNN is an open-source, physics-informed machine learning pipeline for predicting tautomeric aqueous free energy differences (**ΔG_aq**), equilibrium constants (**K_eq**), and Boltzmann population distributions in aqueous solution.
+
+$$
+\Delta G_{\text{aq}} = -RT \ln K_{\text{eq}}, \quad K_{\text{eq}} = \frac{[\text{Tautomer B}]}{[\text{Tautomer A}]}
+$$
 
 The framework integrates:
 1. **PaiNN Equivariant Neural Message Passing**: Captures directional, continuous 3D geometric interactions.
@@ -18,10 +22,10 @@ The framework integrates:
   - `--mode xtb_only` (Default): Runs solely on GFN2-xTB (ALPB water). Fully standalone on Windows and Linux with zero external dependencies.
   - `--mode three_towers`: Runs all three readout branches (Tower A: xTB, Tower B: g-xTB, Tower C: Mixed Fusion) when g-xTB is available.
 - **Instantaneous 2D Triage** (`--triage_only`): Classifies tautomer pairs into 4 confidence tiers in under 1 ms:
-  - **Tier 1 (Strict CBH-2 Golden Zone)**: $\Delta N_{\text{aro}} = 0$ with identical bond-pair types and atom hybridizations (Benchmark MAE ~ 1.30 kcal/mol, median 0.99 kcal/mol).
-  - **Tier 2 (Standard Aromatic Scaffold Comfort Zone)**: $\Delta N_{\text{aro}} = 0$ on aromatic scaffold(s) (Benchmark MAE ~ 1.81 kcal/mol).
-  - **Tier 3 (Flexible Aliphatic Comfort Zone)**: $\Delta N_{\text{aro}} = 0$ without aromatic rings (Benchmark MAE ~ 2.64 kcal/mol).
-  - **Tier 4 (High-Risk Breakdown Zone)**: $\Delta N_{\text{aro}} > 0$. Asymmetric resonance disruption breaks continuum solvation cancellation (Benchmark MAE ~ 5.25 kcal/mol; routed to DFT).
+  - **Tier 1 (Strict CBH-2 Golden Zone)**: |ΔN_aro| = 0 with identical bond-pair types and atom hybridizations (Benchmark MAE = 1.29 kcal/mol, median 1.15 kcal/mol).
+  - **Tier 2 (Standard Aromatic Scaffold Comfort Zone)**: |ΔN_aro| = 0 on aromatic scaffold(s) (Benchmark MAE ~ 1.81 kcal/mol).
+  - **Tier 3 (Flexible Aliphatic Comfort Zone)**: |ΔN_aro| = 0 without aromatic rings (Benchmark MAE ~ 2.64 kcal/mol).
+  - **Tier 4 (High-Risk Breakdown Zone)**: |ΔN_aro| > 0. Asymmetric resonance disruption breaks continuum solvation cancellation (Benchmark MAE = 5.14 kcal/mol; routed to DFT).
 
 ---
 
@@ -29,8 +33,8 @@ The framework integrates:
 
 ### 1. Clone & Set Up Python Environment
 ```bash
-git clone https://github.com/your-username/Hydra-PaiNN.git
-cd Hydra-PaiNN
+git clone https://github.com/KeantChen/TautomerRatio.git
+cd TautomerRatio
 
 # Create conda environment
 conda env create -f environment.yml
@@ -108,27 +112,34 @@ predictor.print_report(result)
 ## Benchmark Performance Summary
 
 ### 1. Aqueous Experimental Benchmarks
-| Benchmark Dataset | Subset / Domain | Sample Size ($N$) | Hydra-PaiNN Tower A | Hydra-PaiNN Tower C | Literature Baseline |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **TautoBase Benchmark** | Comfort Zone ($\Delta N_{\text{aro}}=0$) | 428 | MAE = 1.94 kcal/mol | MAE = 1.95 kcal/mol | GFN2+k: 2.78 kcal/mol |
-| *(Experimental $\Delta G_{\text{exp}}$)* | CBH-2 Golden Zone | 61 | MAE = 1.35 kcal/mol | MAE = 1.30 kcal/mol | Median = 0.99 kcal/mol |
-| | Risk Zone ($\Delta N_{\text{aro}}>0$) | 111 | MAE = 5.04 kcal/mol | MAE = 5.02 kcal/mol | Physics Breakdown |
-| **Wieder et al. Dataset** | Full Overlap | 460 | MAE = 1.85 kcal/mol | MAE = 1.85 kcal/mol | Multi-conf DFT: 1.99 kcal/mol |
-| *(Experimental $\Delta G_{\text{exp}}$)* | CBH-Taut Subset | 48 | MAE = 1.16 kcal/mol | MAE = 1.13 kcal/mol | Multi-conf DFT: 1.40 kcal/mol |
-| | Risk Zone Subset | 82 | MAE = 3.07 kcal/mol | MAE = 3.15 kcal/mol | Multi-conf DFT: 3.53 kcal/mol |
-| **SAMPL2 Calibration Set** | Neutral Aqueous | 28 records | MAE = 0.65 kcal/mol | MAE = 0.65 kcal/mol | Raw GFN2: 1.34 kcal/mol |
+All performance metrics are directly aligned with the published manuscript evaluations across authentic experimental benchmarks:
 
-*All experimental free energy predictions incorporate linear potential energy surface curvature scaling factors ($k_A = 0.568$, $k_C = 0.571$) fitted on SAMPL2.*
+| Benchmark Dataset | Subset / Domain Definition | Sample Size (*N*) | Hydra-PaiNN (Tower C) | Literature Baseline | Performance Notes |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **TautoBase-539 Benchmark** | **Full Benchmark** | 539 (100%) | **MAE = 2.55 kcal/mol** | Raw GFN2: 3.67 kcal/mol | RMSE = 3.76, Dir. Acc = 84.8% |
+| *(Experimental ΔG_exp)* | **Comfort Zone Combined** (|ΔN_aro| = 0) | 428 (79.4%) | **MAE = 1.87 kcal/mol** | GFN2+k: 2.78 kcal/mol | Median = 1.44, RMSE = 2.46, Acc = 87.9% |
+| | ├─ CBH-Taut Golden Subset | 61 (11.3%) | **MAE = 1.29 kcal/mol** | Chemical accuracy target | Median = 1.15, RMSE = 1.76, Acc = 83.6% |
+| | └─ Normal Subset | 367 (68.1%) | **MAE = 1.97 kcal/mol** | Standard comfort baseline | Median = 1.52, RMSE = 2.56, Acc = 88.6% |
+| | **Risk Zone** (|ΔN_aro| > 0) | 111 (20.6%) | **MAE = 5.14 kcal/mol** | Physics breakdown | Median = 4.04, RMSE = 6.73 (Routed to DFT) |
+| **Wieder et al. Dataset** | **Full Aligned Benchmark** | 460 (100%) | **MAE = 2.21 kcal/mol** | Multi-conf DFT: 2.20 kcal/mol | RMSE = 3.23 vs. 3.07, Sign Acc = 85.9% |
+| *(Direct Pairwise DFT)* | **Comfort Zone** (|ΔN_aro| = 0) | 378 (82.2%) | **MAE = 1.73 kcal/mol** | Multi-conf DFT: 1.79 kcal/mol | RMSE = 2.24 vs. 2.39, Sign Acc = 88.8% |
+| | ├─ CBH-Taut Golden Subset | 48 (10.4%) | **MAE = 1.38 kcal/mol** | Multi-conf DFT: 1.56 kcal/mol | RMSE = 1.86 vs. 2.16, Sign Acc = 79.2% |
+| | └─ Normal Subset | 330 (71.7%) | **MAE = 1.78 kcal/mol** | Multi-conf DFT: 1.82 kcal/mol | RMSE = 2.29 vs. 2.43, Sign Acc = 90.2% |
+| | **Risk Zone** (|ΔN_aro| > 0) | 82 (17.8%) | **MAE = 4.38 kcal/mol** | Multi-conf DFT: 4.07 kcal/mol | RMSE = 5.95 vs. 5.14 (Universal DFT bottleneck) |
+| **SAMPL2 Calibration Set** | **Full Neutral Aqueous Set** | 28 records | **MAE = 1.81 kcal/mol** | Raw GFN2: 3.67 kcal/mol | RMSE = 2.22, Dir. Acc = 78.6% |
+| | └─ Aromaticity-conserving pairs | 12 records | **MAE = 0.49 kcal/mol** | Raw GFN2: 1.80+ kcal/mol | Chemical accuracy regime (< 1.0 kcal/mol) |
+
+*Note: All aqueous free energy predictions incorporate linear potential energy surface curvature scaling factors (k_A = 0.575, k_B = 0.576, k_C = 0.577) fitted on SAMPL2.*
 
 ### 2. Note on Theoretical Training Dataset (Frag20-Taut Holdout)
-The model was pre-trained on theoretical tautomer pairs from Frag20-Taut (Ref 19). These are **not experimental free energies**, but microscopic aqueous electronic energies calculated at the B3LYP/6-31G*/SMD level of theory. On the holdout test set of 2,026 rare/orphan scaffold graphs, Hydra-PaiNN achieves a residual electronic energy prediction MAE of 0.32 kcal/mol (Tower A) and 0.31 kcal/mol (Tower C) relative to the B3LYP/6-31G*/SMD reference, verifying that the neural message passing architecture effectively learned the target quantum residual mapping.
+The model was pre-trained on theoretical tautomer pairs from Frag20-Taut. These are microscopic aqueous electronic energies calculated at the B3LYP/6-31G*/SMD level of theory. On the holdout test set of 2,026 rare/orphan scaffold graphs, Hydra-PaiNN achieves a residual electronic energy prediction MAE of **1.33 ± 0.02 kcal/mol** (Tower A) and **1.28 ± 0.01 kcal/mol** (Tower C) relative to the B3LYP/6-31G*/SMD reference (R² = 0.97), verifying that the neural message passing architecture effectively learned the target quantum residual mapping.
 
 ---
 
 ## Directory Structure
 
-```
-Hydra-PaiNN_Release/
+```text
+TautomerRatio/
 ├── bin/
 │   ├── xtb.exe                     # Pre-compiled xTB 6.7.1 (Windows)
 │   ├── libiomp5md.dll              # Intel OpenMP runtime

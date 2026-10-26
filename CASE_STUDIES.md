@@ -84,7 +84,7 @@ python predict.py --smi1 "CC(=O)C1=C(O)CCC1" --smi2 "C/C(O)=C1\CCCC1=O"
 * **Goal**: Predict predominant species with rigid aromatic scaffold ($\ge 1$ aromatic ring).
 * **Physical Phenomenon**:
   * Both isomers share the same aromatic ring count ($N_{\text{ring}} = 1, \Delta N_{\text{aro}} = 0$).
-  * The rigid ring framework prevents wide conformational shifts. Benchmark MAE is **$1.81\text{ kcal/mol}$** with **$90.2\%$** direction accuracy.
+  * The rigid ring framework prevents wide conformational shifts. Benchmark MAE is **1.81 kcal/mol** with **90.2%** direction accuracy.
 
 ### 2. Execution Command
 ```bash
@@ -126,7 +126,7 @@ python predict.py --smi1 "Oc1ccccn1" --smi2 "O=c1cccc[nH]1"
 * **Goal**: Predict keto-enol equilibrium in flexible acyclic chains ($N_{\text{ring}} = 0$).
 * **Physical Phenomenon**:
   * Aromaticity is conserved ($0$ on both sides), but the molecule lacks an aromatic ring to constrain torsion angles.
-  * Thermal conformational entropy can cause minor single-point energy fluctuations. Benchmark MAE is **$2.64\text{ kcal/mol}$**.
+  * Thermal conformational entropy can cause minor single-point energy fluctuations. Benchmark MAE is **2.64 kcal/mol**.
 
 ### 2. Execution Command
 ```bash
@@ -167,7 +167,7 @@ python predict.py --smi1 "CC(=O)CC(=O)C" --smi2 "CC(=O)C=C(O)C"
   * Tautomer B (2,4-Cyclohexadienone): `O=C1C=CCC=C1` ($N_{\text{aro}} = 0$)
 * **Physical Phenomenon ("Physics Poisoning")**:
   * The aromatic sextet is destroyed ($|\Delta N_{\text{aro}}| = 6 > 0$).
-  * Semi-empirical tight-binding methods parameterize average valence bonds and fail drastically when large resonance delocalization energies are broken. Benchmark MAE is **$5.25\text{ kcal/mol}$**.
+  * Semi-empirical tight-binding methods parameterize average valence bonds and fail drastically when large resonance delocalization energies are broken. Benchmark MAE is **5.14 kcal/mol**.
   * The triage intercept proactively alerts the user to route to DFT.
 
 ### 2. Execution Command

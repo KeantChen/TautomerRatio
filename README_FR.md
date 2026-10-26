@@ -112,11 +112,11 @@ Hydra-PaiNN_Release/
 ### Énergie Libre Aqueuse et Étalonnage de Courbure ($k$)
 * **Tour A (xTB Pur)** :
   $$G^{(A)} = E_{\text{eau, xTB}} + G_{\text{corr}} + \Delta E_{\text{ML}}^{(A)}$$
-  $$\Delta G_{\text{calib}}^{(A)} = k_A \cdot \left( G_B^{(A)} - G_A^{(A)} \right) \quad (k_A = 0,56825)$$
+  $$\Delta G_{\text{calib}}^{(A)} = k_A \cdot \left( G_B^{(A)} - G_A^{(A)} \right) \quad (k_A = 0,575)$$
 
 * **Tour C (Fusion Hybride)** :
   $$G^{(C)} = E_{\text{gaz, g-xTB}} + \Delta G_{\text{solv, xTB}}^{\text{ALPB}} + G_{\text{corr}} + \Delta E_{\text{ML}}^{(C)}$$
-  $$\Delta G_{\text{calib}}^{(C)} = k_C \cdot \left( G_B^{(C)} - G_A^{(C)} \right) \quad (k_C = 0,57101)$$
+  $$\Delta G_{\text{calib}}^{(C)} = k_C \cdot \left( G_B^{(C)} - G_A^{(C)} \right) \quad (k_C = 0,577)$$
 
 ### Ratios de Population de Boltzmann
 $$K_{\text{eq}} = \exp\left( -\frac{\Delta G_{\text{calib}}}{RT} \right)$$
