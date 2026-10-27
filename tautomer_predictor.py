@@ -566,45 +566,39 @@ class TautomerPredictor:
             domain = "Risk Zone"
             subset = "Risk Zone"
             tier = 3
-            tier_name = "Tier 3 (Risk Zone: Aromatic Breakdown)"
+            tier_name = "Tier 3 (Risk Zone)"
             expected_mae = 5.14
-            confidence = "Elevated Risk / Caution"
+            confidence = "Expected MAE: 5.14 kcal/mol"
             message = (
-                "[!] Risk Zone (Tier 3): Aromaticity transition detected (|ΔN_aro| > 0). "
-                "Transformations accompanied by the creation or destruction of aromatic rings induce "
-                "pronounced shifts in aromatic stabilization energy (ASE), breaking continuum solvation "
-                "error cancellation (TautoBase MAE = 5.14 kcal/mol, median 4.06 kcal/mol, RMSE = 6.73 kcal/mol; "
-                "DFT-460 MAE = 4.38 kcal/mol vs. DFT 4.07 kcal/mol). "
-                "Note: Standard continuum DFT also exhibits elevated errors in this regime; active research "
-                "is underway to enhance Risk Zone representations."
+                "[Tier 3 / Risk Zone]: Aromaticity transition (|ΔN_aro| > 0). "
+                "TautoBase MAE = 5.14 kcal/mol (median 4.06 kcal/mol, RMSE = 6.73 kcal/mol); "
+                "DFT-460 MAE = 4.38 kcal/mol (DFT reference MAE = 4.07 kcal/mol). (Update is coming soon)"
             )
         elif strict_cbh2:
             status = "COMFORT_ZONE"
             domain = "Comfort Zone"
             subset = "CBH-Taut Subset"
             tier = 1
-            tier_name = "Tier 1 (CBH-Taut Subset: Homodesmotic Golden Domain)"
+            tier_name = "Tier 1 (CBH-Taut Subset)"
             expected_mae = 1.29
-            confidence = "Ultra-High (Chemical Accuracy Regime)"
+            confidence = "Expected MAE: 1.29 kcal/mol"
             message = (
-                "[***] Ultra-High Confidence (Tier 1 / CBH-Taut Subset): Strict CBH-Taut homodesmotic criterion satisfied! "
-                "Aromaticity, atom hybridizations, and exact bond-types are strictly invariant across tautomers. "
-                "Systematic baseline errors cancel out robustly (TautoBase MAE = 1.29 kcal/mol, median 1.15 kcal/mol; "
-                "DFT-460 MAE = 1.38 kcal/mol). Recommendation: Ideal for high-precision virtual screening and quantitative binding affinity."
+                "[Tier 1 / CBH-Taut Subset]: Invariant heavy-atom hybridizations and bond-pair types (|ΔN_aro| = 0). "
+                "TautoBase MAE = 1.29 kcal/mol (median 1.15 kcal/mol, RMSE = 1.76 kcal/mol); "
+                "DFT-460 MAE = 1.38 kcal/mol."
             )
         else:
             status = "COMFORT_ZONE"
             domain = "Comfort Zone"
             subset = "Normal Subset"
             tier = 2
-            tier_name = "Tier 2 (Normal Subset: Standard Comfort Domain)"
+            tier_name = "Tier 2 (Normal Subset)"
             expected_mae = 1.97
-            confidence = "High (Standard Benchmark Regime)"
+            confidence = "Expected MAE: 1.97 kcal/mol"
             message = (
-                "[*] Standard Comfort Zone (Tier 2 / Normal Subset): Aromaticity conserved (|ΔN_aro| = 0). "
-                "Localized bond and hybridization rearrangements are well within model representation capacity "
-                "(TautoBase MAE = 1.97 kcal/mol, median 1.53 kcal/mol; DFT-460 MAE = 1.78 kcal/mol, Direction Acc = 88.3%). "
-                "Recommendation: Suitable for standard virtual screening and lead optimization."
+                "[Tier 2 / Normal Subset]: Aromaticity conserved (|ΔN_aro| = 0). "
+                "TautoBase MAE = 1.97 kcal/mol (median 1.53 kcal/mol, RMSE = 2.56 kcal/mol); "
+                "DFT-460 MAE = 1.78 kcal/mol."
             )
 
         return {
