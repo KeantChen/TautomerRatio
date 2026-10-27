@@ -73,24 +73,6 @@ For high-throughput screening and automated scoring pipelines, these three domai
 
 ---
 
-## 🔬 Benchmark Performance Summary
-
-Performance comparison of baselines and Hydra-PaiNN across subsets (excerpted from manuscript Table 4 / Table 5):
-
-| Dataset | Subset | N (%) | Baseline / DFT MAE | Hydra-PaiNN MAE | Baseline RMSE | Hydra-PaiNN RMSE |
-| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| **TautoBase-539** | CBH-Taut Subset | 61 (11.3%) | 1.29 | **1.29** | 1.76 | **1.76** |
-| | Normal Subset | 367 (68.1%) | 1.97 | **1.97** | 2.56 | **2.56** |
-| | Risk Zone | 111 (20.6%) | 5.14 | **5.14** | 6.73 | **6.73** |
-| **DFT-460** | CBH-Taut Subset | 48 (10.4%) | 1.56 (DFT) | **1.38** | 2.16 (DFT) | **1.86** |
-| | Normal Subset | 330 (71.7%) | 1.82 (DFT) | **1.78** | 2.43 (DFT) | **2.29** |
-| | Risk Zone | 82 (17.8%) | 4.07 (DFT) | **4.38** | 5.14 (DFT) | **5.95** |
-| **sPhysNet-Taut-100**| CBH-Taut Subset | 11 (11.0%) | 1.58 (Pretrained) | **1.02** | 1.98 | **1.30** |
-| | Normal Subset | 68 (68.0%) | 2.97 (Pretrained) | **1.82** | 3.74 | **2.19** |
-| | Risk Zone | 21 (21.0%) | 10.19 (Pretrained) | **5.06** | 11.90 | **6.00** |
-
----
-
 ## 💻 Local Installation & Setup
 
 ### 1. Clone & Set Up Python Environment
