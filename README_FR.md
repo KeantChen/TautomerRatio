@@ -1,4 +1,4 @@
-# Hydra-PaiNN: Physics-Informed Multi-Tower Delta-Learning and Applicability Domain Triage for Aqueous Tautomer Ratios
+# Hydra-PaiNN : Apprentissage Delta Multi-Tours Informé par la Physique et Triage du Domaine d'Applicabilité pour les Rapports Tautomères en Phase Aqueuse
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/KeantChen/TautomerRatio/blob/main/notebooks/Hydra_PaiNN_Quickstart.ipynb)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-blue.svg?logo=github)](https://github.com/KeantChen/TautomerRatio)
@@ -6,73 +6,73 @@
 
 > **Langues / Languages / 语言版本** : [English](README.md) | [中文 (Chinese)](README_CN.md) | [Français (French)](README_FR.md)
 
-Hydra-PaiNN is an open-source machine learning pipeline for predicting tautomeric aqueous free energy differences (**ΔG_aq**), equilibrium constants (**K_eq**), and Boltzmann population distributions in aqueous solution.
+Hydra-PaiNN est un pipeline d'apprentissage automatique open-source conçu pour prédire les différences d'énergie libre tautomère en phase aqueuse (**ΔG_aq**), les constantes d'équilibre (**K_eq**) et les distributions de populations de Boltzmann en solution aqueuse.
 
 $$
-\Delta G_{\text{aq}} = -RT \ln K_{\text{eq}}, \quad K_{\text{eq}} = \frac{[\text{Tautomer B}]}{[\text{Tautomer A}]}
+\Delta G_{\text{aq}} = -RT \ln K_{\text{eq}}, \quad K_{\text{eq}} = \frac{[\text{Tautomère B}]}{[\text{Tautomère A}]}
 $$
 
-The framework integrates:
-1. **PaiNN Equivariant Neural Message Passing**: Captures directional 3D geometric interactions.
-2. **Semi-Empirical Quantum Chemistry**: Couples GFN2-xTB (ALPB implicit water) with optional g-xTB descriptors.
-3. **Applicability Domain Triage**: A 2D SMILES graph diagnostic based on aromaticity conservation and Raghavachari Connectivity-Based Hierarchy (CBH) rules.
+L'architecture intègre :
+1. **Passage de messages neuronaux équivariants PaiNN** : Capture les interactions géométriques 3D directionnelles.
+2. **Chimie quantique semi-empirique** : Associe GFN2-xTB (solvatation implicite ALPB dans l'eau) aux descripteurs g-xTB optionnels.
+3. **Triage du domaine d'applicabilité** : Diagnostic topologique 2D basé sur la conservation de l'aromaticité et la hiérarchie basée sur la connectivité (CBH) de Raghavachari.
 
 ---
 
-## ⚡ Quickstart on Google Colab (Zero-Setup in Browser)
+## ⚡ Démarrage rapide sur Google Colab (Sans installation locale)
 
-Run Hydra-PaiNN directly in Google Colab without local installation:
+Exécutez Hydra-PaiNN directement dans votre navigateur via Google Colab :
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/KeantChen/TautomerRatio/blob/main/notebooks/Hydra_PaiNN_Quickstart.ipynb)
 
-* **Interactive Form**: Input two SMILES to view 2D structures and predicted Boltzmann population percentages.
-* **Summary Cards**: Inspect ΔG, K_eq, and domain diagnostics.
-* **Batch CSV Processing**: Upload a CSV file and download predicted values.
-* **Hardware**: Runs on Google Colab CPU/GPU.
+* **Formulaire interactif** : Saisissez deux chaînes SMILES pour visualiser les structures 2D et les pourcentages de population de Boltzmann prédits.
+* **Cartes récapitulatives** : Consultez ΔG_aq, log10(K_eq), K_eq et le diagnostic du domaine d'applicabilité.
+* **Traitement par lots (CSV)** : Évaluez un fichier CSV et comparez les résultats aux valeurs expérimentales.
+* **Matériel** : Fonctionne sur CPU ou GPU dans Google Colab.
 
 ---
 
-## 🎯 Applicability Domains & Subsets
+## 🎯 Domaines d'applicabilité et sous-ensembles
 
-Tautomer pairs are partitioned upfront based on aromaticity conservation and Raghavachari Connectivity-Based Hierarchy (CBH) rules:
+Les paires de tautomères sont réparties en amont selon la conservation de l'aromaticité et les règles CBH de Raghavachari :
 
-### 1. Comfort Zone ($|\Delta N_{\text{aro}}| = 0$, 79.4% of Dataset)
-Tautomer pairs with conserved aromatic atom counts:
-* **CBH-Taut Subset** (11.3% of TautoBase-539, 61 pairs):
-  * **Criteria**: Heavy-atom hybridization states ($H_i$) and covalent bond topologies ($B_{ij}$) are invariant across tautomers under Raghavachari homodesmotic rules.
-  * **Results**:
-    * **TautoBase-539**: MAE = **1.29 kcal/mol** (median = 1.15 kcal/mol, RMSE = 1.76 kcal/mol).
-    * **DFT-460**: MAE = **1.38 kcal/mol** (DFT reference: MAE = 1.56 kcal/mol).
-    * **sPhysNet-Taut-100**: MAE = **1.02 kcal/mol**.
-* **Normal Subset** (68.1% of TautoBase-539, 367 pairs):
-  * **Criteria**: Aromaticity is conserved (|ΔN_aro| = 0), with localized bond and hybridization rearrangements.
-  * **Results**:
-    * **TautoBase-539**: MAE = **1.97 kcal/mol** (median = 1.53 kcal/mol, RMSE = 2.56 kcal/mol, Direction Acc = 88.3%).
-    * **DFT-460**: MAE = **1.78 kcal/mol** (DFT reference: MAE = 1.82 kcal/mol).
-    * **sPhysNet-Taut-100**: MAE = **1.82 kcal/mol**.
+### 1. Comfort Zone ($|\Delta N_{\text{aro}}| = 0$, 79,4 % du jeu de données)
+Paires de tautomères conservant le nombre d'atomes aromatiques :
+* **CBH-Taut Subset** (11,3 % de TautoBase-539, 61 paires) :
+  * **Critères** : Les états d'hybridation des atomes lourds ($H_i$) et les topologies de liaisons covalentes ($B_{ij}$) sont invariants entre les tautomères selon les règles homodesmotiques de Raghavachari.
+  * **Résultats** :
+    * **TautoBase-539** : MAE = **1.29 kcal/mol** (médiane = 1.15 kcal/mol, RMSE = 1.76 kcal/mol).
+    * **DFT-460** : MAE = **1.38 kcal/mol** (référence DFT : MAE = 1.56 kcal/mol).
+    * **sPhysNet-Taut-100** : MAE = **1.02 kcal/mol**.
+* **Normal Subset** (68,1 % de TautoBase-539, 367 paires) :
+  * **Critères** : L'aromaticité est conservée ($|\Delta N_{\text{aro}}| = 0$), avec des réarrangements localisés de liaisons et d'hybridation.
+  * **Résultats** :
+    * **TautoBase-539** : MAE = **1.97 kcal/mol** (médiane = 1.53 kcal/mol, RMSE = 2.56 kcal/mol, précision directionnelle = 88.3 %).
+    * **DFT-460** : MAE = **1.78 kcal/mol** (référence DFT : MAE = 1.82 kcal/mol).
+    * **sPhysNet-Taut-100** : MAE = **1.82 kcal/mol**.
 
-### 2. Risk Zone ($|\Delta N_{\text{aro}}| > 0$, 20.6% of Dataset, 111 pairs)
-Transformations accompanied by the creation or destruction of aromatic rings (e.g., phenol $\leftrightarrow$ 2,4-cyclohexadienone).
-* **Results**:
-  * **TautoBase-539**: MAE = **5.14 kcal/mol** (median = 4.06 kcal/mol, RMSE = 6.73 kcal/mol).
-  * **DFT-460**: MAE = **4.38 kcal/mol** (DFT reference: MAE = 4.07 kcal/mol).
-* **Note**: (Update is coming soon)
+### 2. Risk Zone ($|\Delta N_{\text{aro}}| > 0$, 20,6 % du jeu de données, 111 paires)
+Transformations accompagnées de la création ou de la destruction de cycles aromatiques (par ex., phénol $\leftrightarrow$ cyclohexa-2,4-diénone).
+* **Résultats** :
+  * **TautoBase-539** : MAE = **5.14 kcal/mol** (médiane = 4.06 kcal/mol, RMSE = 6.73 kcal/mol).
+  * **DFT-460** : MAE = **4.38 kcal/mol** (référence DFT : MAE = 4.07 kcal/mol).
+* **Note** : (Update is coming soon)
 
 ---
 
-### 📊 3-Tier Confidence Hierarchy
+### 📊 Hiérarchie à 3 niveaux (3-Tier)
 
-| Tier | Subset / Domain | Criteria | Expected MAE |
+| Niveau (Tier) | Sous-ensemble / Domaine | Critères | MAE attendue |
 | :---: | :--- | :--- | :---: |
-| **Tier 1** | **CBH-Taut Subset** | $\|\Delta N_\text{aro}\| = 0$, invariant hybridizations and bond types | **1.29 kcal/mol** |
-| **Tier 2** | **Normal Subset** | $\|\Delta N_\text{aro}\| = 0$, aromaticity conserved | **1.97 kcal/mol** |
-| **Tier 3** | **Risk Zone** | $\|\Delta N_\text{aro}\| > 0$, aromaticity transition | **5.14 kcal/mol** *(Update is coming soon)* |
+| **Tier 1** | **CBH-Taut Subset** | $\|\Delta N_\text{aro}\| = 0$, hybridations et types de liaisons invariants | **1.29 kcal/mol** |
+| **Tier 2** | **Normal Subset** | $\|\Delta N_\text{aro}\| = 0$, aromaticité conservée | **1.97 kcal/mol** |
+| **Tier 3** | **Risk Zone** | $\|\Delta N_\text{aro}\| > 0$, transition d'aromaticité | **5.14 kcal/mol** *(Update is coming soon)* |
 
 ---
 
-## 💻 Local Installation & Setup
+## 💻 Installation et configuration locales
 
-### 1. Clone & Set Up Python Environment
+### 1. Cloner le dépôt et installer les dépendances Python
 ```bash
 git clone https://github.com/KeantChen/TautomerRatio.git
 cd TautomerRatio
@@ -80,95 +80,95 @@ cd TautomerRatio
 pip install -r requirements.txt
 ```
 
-### 2. Verify Installation
-Run the self-test script:
+### 2. Vérifier l'installation
+Exécutez le script d'auto-test :
 ```bash
 python verify_installation.py
 ```
 
 ---
 
-## 🚀 Command-Line Usage
+## 🚀 Utilisation en ligne de commande (CLI)
 
-### 1. 2D Topological Triage
-Examine domain applicability and expected uncertainty without running quantum chemistry:
+### 1. Triage topologique 2D
+Évaluer le domaine d'applicabilité et l'incertitude attendue sans exécuter de calcul quantique :
 ```bash
 python predict.py --smi1 "OC1=CC=CC=N1" --smi2 "O=C1NC=CC=C1" --triage_only
 ```
 
-### 2. Standard Prediction (xTB Tower-A, Standalone)
-Predict aqueous free energy difference, equilibrium constant, and dominant tautomer:
+### 2. Prédiction standard (Tour A xTB, autonome)
+Prédire la différence d'énergie libre en phase aqueuse, la constante d'équilibre et le tautomère majoritaire :
 ```bash
 python predict.py --smi1 "OC1=CC=CC=N1" --smi2 "O=C1NC=CC=C1" --mode xtb_only
 ```
 
-### 3. Multi-Tower Prediction (Towers A, B, and C)
-When g-xTB is configured (see [bin/README_ENGINES.md](bin/README_ENGINES.md)):
+### 3. Prédiction multi-tours (Tours A, B et C)
+Lorsque g-xTB est configuré (voir [bin/README_ENGINES.md](bin/README_ENGINES.md)) :
 ```bash
 python predict.py --smi1 "OC1=CC=CC=N1" --smi2 "O=C1NC=CC=C1" --mode three_towers
 ```
 
-### 4. Batch Prediction from CSV
-Evaluate a dataset of tautomer pairs:
+### 4. Prédiction par lots à partir d'un fichier CSV
+Évaluer un ensemble de paires de tautomères :
 ```bash
 python predict.py --input examples/test_cases.csv --output predictions.csv --mode xtb_only
 ```
 
 ---
 
-## 🐍 Python API Usage
+## 🐍 Utilisation via l'API Python
 
 ```python
 from tautomer_predictor import TautomerPredictor
 
-# 1. Initialize predictor (loads weights and scalers)
+# 1. Initialiser le prédicteur (charge les poids et les paramètres de normalisation)
 predictor = TautomerPredictor()
 
-# 2. 2D Triage
+# 2. Triage topologique 2D
 triage = predictor.triage_check("OC1=CC=CC=N1", "O=C1NC=CC=C1")
-print(f"Domain: {triage['domain']} ({triage['subset']}) | Expected MAE: {triage['expected_mae']} kcal/mol")
+print(f"Domaine : {triage['domain']} ({triage['subset']}) | MAE attendue : {triage['expected_mae']} kcal/mol")
 
-# 3. Full Prediction
+# 3. Prédiction complète
 result = predictor.predict(
     smiles_A="OC1=CC=CC=N1",
     smiles_B="O=C1NC=CC=C1",
-    mode="xtb_only",       # or "three_towers"
+    mode="xtb_only",       # ou "three_towers"
     temperature=298.15,    # Kelvin
-    solvent="water"        # ALPB solvent
+    solvent="water"        # solvant ALPB
 )
 
-# Print report
+# Afficher le rapport
 predictor.print_report(result)
 ```
 
 ---
 
-## 📁 Directory Structure
+## 📁 Structure du répertoire
 
 ```text
 TautomerRatio/
 ├── notebooks/
-│   └── Hydra_PaiNN_Quickstart.ipynb # Google Colab notebook
+│   └── Hydra_PaiNN_Quickstart.ipynb # Notebook Google Colab
 ├── bin/
-│   ├── xtb.exe                      # Pre-compiled xTB 6.7.1 (Windows)
-│   ├── libiomp5md.dll               # Intel OpenMP runtime
-│   └── README_ENGINES.md            # Instructions for Linux & WSL setup
+│   ├── xtb.exe                      # Exécutable précompilé xTB 6.7.1 (Windows)
+│   ├── libiomp5md.dll               # Runtime Intel OpenMP
+│   └── README_ENGINES.md            # Instructions pour Linux et WSL
 ├── models/
-│   ├── hydra_painn_best.pth         # Trained PyTorch model weights
-│   └── scalers/                     # Feature normalization scalers
+│   ├── hydra_painn_best.pth         # Poids du modèle PyTorch entraîné
+│   └── scalers/                     # Paramètres de normalisation des descripteurs
 ├── examples/
-│   ├── test_cases.csv               # Curated validation pairs across 3 tiers
-│   └── test_predictions.csv         # Reference execution output
-├── tautomer_predictor.py            # Prediction engine
-├── predict.py                       # Command-line interface
-├── verify_installation.py           # Self-test diagnostic script
-├── CASE_STUDIES.md                  # Validation cases walkthrough
-├── README.md                        # English documentation
-├── README_CN.md                     # Chinese documentation
-└── README_FR.md                     # French documentation
+│   ├── test_cases.csv               # Paires de validation avec valeurs expérimentales (3 niveaux)
+│   └── test_predictions.csv         # Sortie de référence
+├── tautomer_predictor.py            # Moteur de prédiction principal
+├── predict.py                       # Interface en ligne de commande (CLI)
+├── verify_installation.py           # Script de diagnostic et d'auto-test
+├── CASE_STUDIES.md                  # Études de cas détaillées
+├── README.md                        # Documentation en anglais
+├── README_CN.md                     # Documentation en chinois
+└── README_FR.md                     # Documentation en français
 ```
 
 ---
 
-## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## 📄 Licence
+Ce projet est distribué sous licence MIT — voir le fichier [LICENSE](LICENSE) pour plus de détails.
