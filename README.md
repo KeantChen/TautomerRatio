@@ -57,7 +57,7 @@ Transformations accompanied by the creation or destruction of aromatic rings (e.
   * **TautoBase-539**: MAE = **5.14 kcal/mol** (median = 4.06 kcal/mol, RMSE = 6.73 kcal/mol).
   * **DFT-460**: Hydra-PaiNN MAE = **4.38 kcal/mol**.
 * **Physical Chemistry Root Cause & Ongoing Development**:
-  Aromaticity breakdown induces large shifts in Aromatic Stabilization Energy (ASE) and severe discrete solvent reorganization that breaks continuum dielectric cancellation. Importantly, **even uncalibrated multi-conformation high-level DFT (B3LYP/aug-cc-pVTZ//B3LYP/6-31G(d)/SMD) struggles in this regime with an elevated MAE of 4.07 kcal/mol**, confirming that continuum solvent physics reaches an intrinsic ceiling. **We are actively developing next-generation architectures (incorporating explicit micro-solvation shells and multi-tower hybrid quantum fusion) to systematically enhance Risk Zone predictions.**
+  Aromaticity breakdown induces large shifts in Aromatic Stabilization Energy (ASE) and severe discrete solvent reorganization that breaks continuum dielectric cancellation. Importantly, **even uncalibrated multi-conformation high-level DFT (B3LYP/aug-cc-pVTZ//B3LYP/6-31G(d)/SMD) struggles in this regime with an elevated MAE of 4.07 kcal/mol**, confirming that continuum solvent physics reaches an intrinsic ceiling. **Update is coming soon.**
 
 ---
 
@@ -69,7 +69,7 @@ For high-throughput screening and automated scoring pipelines, these three domai
 | :---: | :--- | :--- | :---: | :---: | :--- |
 | **Tier 1** | **CBH-Taut Subset** | $\|\Delta N_\text{aro}\| = 0$, strict homodesmotic invariance | **1.29 kcal/mol** | **Ultra-High** | Quantitative binding affinity & potency ranking |
 | **Tier 2** | **Normal Subset** | $\|\Delta N_\text{aro}\| = 0$, standard aromatic/aliphatic scaffold | **1.97 kcal/mol** | **High** | High-throughput virtual screening & lead optimization |
-| **Tier 3** | **Risk Zone** | $\|\Delta N_\text{aro}\| > 0$, aromaticity transition/breakdown | **5.14 kcal/mol** | **Caution** | Flags aromatic disruption (Active research ongoing) |
+| **Tier 3** | **Risk Zone** | $\|\Delta N_\text{aro}\| > 0$, aromaticity transition/breakdown | **5.14 kcal/mol** | **Caution** | Flags aromatic disruption (Update is coming soon) |
 
 ---
 
