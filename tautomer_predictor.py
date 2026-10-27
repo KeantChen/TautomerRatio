@@ -533,8 +533,12 @@ class TautomerPredictor:
     @classmethod
     def triage_check(cls, smiles_A, smiles_B):
         """
-        4-Tier Quantum-Topological CBH-2 Triage (<1 ms 2D evaluation).
-        Categorizes tautomer pairs into Golden Zone (Tier 1), Comfort Zone (Tier 2/3), or Risk Zone (Tier 4).
+        Quantum-Topological Applicability Domain & 3-Tier Triage (<1 ms 2D evaluation).
+        Partitions pairs into:
+          - Comfort Zone (|ΔN_aro| = 0):
+              ↳ CBH-Taut Subset (Tier 1: Strict Homodesmotic Golden Domain)
+              ↳ Normal Subset (Tier 2: Standard Aromatic / Acyclic Comfort Domain)
+          - Risk Zone (|ΔN_aro| > 0, Tier 3: Aromatic Breakdown Domain)
         """
         fp_A = cls.extract_cbh2_fingerprint(smiles_A)
         fp_B = cls.extract_cbh2_fingerprint(smiles_B)
@@ -558,63 +562,57 @@ class TautomerPredictor:
         hyb_diff_details = [f"{k}: Δ={v}" for k, v in elem_hyb_diff.items() if v > 0]
 
         if not is_aromatic_conserved:
-            status = "HIGH_RISK"
-            tier = 4
-            tier_name = "Tier 4 (High-Risk Aromatic Breakdown)"
-            domain = "Poisoned Domain (Physics Collapse)"
+            status = "RISK_ZONE"
+            domain = "Risk Zone"
+            subset = "Risk Zone"
+            tier = 3
+            tier_name = "Tier 3 (Risk Zone: Aromatic Breakdown)"
             expected_mae = 5.14
-            confidence = "Low / Caution"
+            confidence = "Elevated Risk / Caution"
             message = (
-                "[!] High-Risk Zone (Tier 4): Aromaticity transition detected (|ΔN_aro| > 0). "
-                "Resonance stabilization energy is asymmetric across isomers, breaking semi-empirical "
-                "error cancellation (benchmark MAE = 5.14 kcal/mol, median 4.06 kcal/mol, RMSE = 6.73 kcal/mol). "
-                "Recommendation: Route to high-level DFT expert system."
+                "[!] Risk Zone (Tier 3): Aromaticity transition detected (|ΔN_aro| > 0). "
+                "Transformations accompanied by the creation or destruction of aromatic rings induce "
+                "pronounced shifts in aromatic stabilization energy (ASE), breaking continuum solvation "
+                "error cancellation (TautoBase MAE = 5.14 kcal/mol, median 4.06 kcal/mol, RMSE = 6.73 kcal/mol; "
+                "DFT-460 MAE = 4.38 kcal/mol vs. DFT 4.07 kcal/mol). "
+                "Note: Standard continuum DFT also exhibits elevated errors in this regime; active research "
+                "is underway to enhance Risk Zone representations."
             )
         elif strict_cbh2:
             status = "COMFORT_ZONE"
+            domain = "Comfort Zone"
+            subset = "CBH-Taut Subset"
             tier = 1
-            tier_name = "Tier 1 (Strict CBH-2 Homodesmotic Golden Domain)"
-            domain = "Strict CBH-2 Golden Zone (Raghavachari Homodesmotic)"
+            tier_name = "Tier 1 (CBH-Taut Subset: Homodesmotic Golden Domain)"
             expected_mae = 1.29
             confidence = "Ultra-High (Chemical Accuracy Regime)"
             message = (
-                "[***] Ultra-High Confidence (Tier 1): Strict CBH-2 Homodesmotic criterion satisfied! "
-                "Aromaticity, atom hybridizations, and exact bond-types are 100% mirrored across tautomers. "
-                "Systematic errors cancel out seamlessly (benchmark MAE = 1.29 kcal/mol, median 1.15 kcal/mol). "
-                "Recommendation: Ideal for high-precision virtual screening and quantitative binding affinity."
-            )
-        elif min_arorings >= 1:
-            status = "COMFORT_ZONE"
-            tier = 2
-            tier_name = "Tier 2 (Standard Aromatic Scaffold Comfort Domain)"
-            domain = "Standard Aromatic Scaffold Comfort Zone"
-            expected_mae = 1.81
-            confidence = "High (Standard Industrial Benchmark)"
-            message = (
-                "[*] Standard Comfort Zone (Tier 2): Aromaticity conserved with rigid aromatic scaffold(s). "
-                "Localized bond/hybridization rearrangements are well within model capacity "
-                "(benchmark MAE ~ 1.81 kcal/mol, Direction Acc ~ 90.2%). "
-                "Recommendation: Suitable for standard high-throughput virtual screening."
+                "[***] Ultra-High Confidence (Tier 1 / CBH-Taut Subset): Strict CBH-Taut homodesmotic criterion satisfied! "
+                "Aromaticity, atom hybridizations, and exact bond-types are strictly invariant across tautomers. "
+                "Systematic baseline errors cancel out robustly (TautoBase MAE = 1.29 kcal/mol, median 1.15 kcal/mol; "
+                "DFT-460 MAE = 1.38 kcal/mol). Recommendation: Ideal for high-precision virtual screening and quantitative binding affinity."
             )
         else:
             status = "COMFORT_ZONE"
-            tier = 3
-            tier_name = "Tier 3 (Flexible Aliphatic Comfort Domain)"
-            domain = "Flexible Aliphatic Comfort Zone"
-            expected_mae = 2.64
-            confidence = "Moderate"
+            domain = "Comfort Zone"
+            subset = "Normal Subset"
+            tier = 2
+            tier_name = "Tier 2 (Normal Subset: Standard Comfort Domain)"
+            expected_mae = 1.97
+            confidence = "High (Standard Benchmark Regime)"
             message = (
-                "[~] Flexible Aliphatic Zone (Tier 3): Aromaticity conserved but contains 0 aromatic rings. "
-                "High conformational flexibility in acyclic/aliphatic chains may induce minor energy fluctuations "
-                "(benchmark MAE ~ 2.64 kcal/mol, Direction Acc ~ 81.9%). "
-                "Recommendation: Reliable for general preference ranking; take note of conformational effects."
+                "[*] Standard Comfort Zone (Tier 2 / Normal Subset): Aromaticity conserved (|ΔN_aro| = 0). "
+                "Localized bond and hybridization rearrangements are well within model representation capacity "
+                "(TautoBase MAE = 1.97 kcal/mol, median 1.53 kcal/mol; DFT-460 MAE = 1.78 kcal/mol, Direction Acc = 88.3%). "
+                "Recommendation: Suitable for standard virtual screening and lead optimization."
             )
 
         return {
             'status': status,
+            'domain': domain,
+            'subset': subset,
             'tier': tier,
             'tier_name': tier_name,
-            'domain': domain,
             'expected_mae': expected_mae,
             'confidence': confidence,
             'strict_cbh2': strict_cbh2,

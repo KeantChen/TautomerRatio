@@ -46,7 +46,7 @@ python predict.py --smi1 "CC(=O)C1=C(O)CCC1" --smi2 "C/C(O)=C1\CCCC1=O"
 ### 3. 预期终端输出
 ```text
 ==============================================================================
-  [TautomerPredictor] 4-Tier Quantum-Topological Triage Pipeline
+  [TautomerPredictor] 3-Tier Quantum-Topological Triage Pipeline
 ==============================================================================
   Molecule A:   CC(=O)C1=C(O)CCC1
   Molecule B:   C/C(O)=C1\CCCC1=O
@@ -97,7 +97,7 @@ python predict.py --smi1 "Oc1ccccn1" --smi2 "O=c1cccc[nH]1"
 ### 3. 预期终端输出
 ```text
 ==============================================================================
-  [TautomerPredictor] 4-Tier Quantum-Topological Triage Pipeline
+  [TautomerPredictor] 3-Tier Quantum-Topological Triage Pipeline
 ==============================================================================
   Molecule A:   Oc1ccccn1
   Molecule B:   O=c1cccc[nH]1
@@ -142,7 +142,7 @@ python predict.py --smi1 "CC(=O)CC(=O)C" --smi2 "CC(=O)C=C(O)C"
 ### 3. 预期终端输出
 ```text
 ==============================================================================
-  [TautomerPredictor] 4-Tier Quantum-Topological Triage Pipeline
+  [TautomerPredictor] 3-Tier Quantum-Topological Triage Pipeline
 ==============================================================================
   Molecule A:   CC(=O)CC(=O)C
   Molecule B:   CC(=O)C=C(O)C
@@ -165,7 +165,7 @@ python predict.py --smi1 "CC(=O)CC(=O)C" --smi2 "CC(=O)C=C(O)C"
 
 ---
 
-## 📚 案例 4：苯酚 $\leftrightarrow$ 2,4-环己二烯酮 (Tier 4: 高风险物理污染域)
+## 📚 案例 4：苯酚 $\leftrightarrow$ 2,4-环己二烯酮 (Tier 3: 风险域 (芳香性破坏与重排))
 
 ### 1. 目标与化学背景
 * **输入分子 SMILES**：
@@ -185,17 +185,17 @@ python predict.py --smi1 "Oc1ccccc1" --smi2 "O=C1C=CCC=C1"
 ### 3. 预期终端输出
 ```text
 ==============================================================================
-  [TautomerPredictor] 4-Tier Quantum-Topological Triage Pipeline
+  [TautomerPredictor] 3-Tier Quantum-Topological Triage Pipeline
 ==============================================================================
   Molecule A:   Oc1ccccc1
   Molecule B:   O=C1C=CCC=C1
   xTB Engine:   xTB 6.7.1 GFN2-xTB (water)
   Temperature:  298.15 K (Solvent: water)
 ------------------------------------------------------------------------------
-  [Triage Tier]: Tier 4 (High-Risk Aromatic Breakdown)
+  [Triage Tier]: Tier 3 (High-Risk Aromatic Breakdown)
   [Domain]:      Poisoned Domain (Physics Collapse)
   [Expected MAE]: ~5.14 kcal/mol  |  Confidence: Low / Caution
-  [Diagnostic]:  [!] High-Risk Zone (Tier 4): Aromaticity transition detected (|ΔN_aro| > 0). Resonance stabilization energy is asymmetric across isomers, breaking semi-empirical error cancellation (benchmark MAE = 5.14 kcal/mol, median 4.06 kcal/mol, RMSE = 6.73 kcal/mol). Recommendation: Route to high-level DFT expert calculation.
+  [Diagnostic]:  [!] High-Risk Zone (Tier 3): Aromaticity transition detected (|ΔN_aro| > 0). Resonance stabilization energy is asymmetric across isomers, breaking semi-empirical error cancellation (benchmark MAE = 5.14 kcal/mol, median 4.06 kcal/mol, RMSE = 6.73 kcal/mol). Recommendation: Route to high-level DFT expert calculation.
   [Bond Shifts]: C-O_DOUBLE: Delta=1, C-C_SINGLE: Delta=5, C-C_AROMATIC: Delta=6, C-C_DOUBLE: Delta=1, C-O_SINGLE: Delta=1
 ------------------------------------------------------------------------------
   [Multi-Tower Predictions] (Calibrated Free Energy & Ratio):
@@ -215,4 +215,4 @@ python predict.py --smi1 "Oc1ccccc1" --smi2 "O=C1C=CCC=C1"
 | **Tier 1** | 烯醇-烯醇质子移位 | `CC(=O)C1=C(O)CCC1` $\to$ `C/C(O)=C1\CCCC1=O` | CBH-2 严格等合键 | $1 : 1.70$ (实测 $1 : 3.98$) | **B (63.0%)** | $\mathbf{1.29}\text{ kcal/mol}$ | 极高置信度，直接用于定量计算 |
 | **Tier 2** | 吡啶酮/嘧啶酮互变 | `Oc1ccccn1` $\to$ `O=c1cccc[nH]1` | 芳香环数 $\ge 1$ | $1 : 36.38$ | **B (97.3%)** | $\mathbf{1.81}\text{ kcal/mol}$ | 高置信度，工业级虚拟筛选 |
 | **Tier 3** | 链状脂肪酮/烯醇 | `CC(=O)CC(=O)C` $\to$ `CC(=O)C=C(O)C` | 芳香环数 $= 0$ | $4622 : 1$ | **A (99.9%)** | $\mathbf{2.64}\text{ kcal/mol}$ | 中等置信度，供倾向性排序参考 |
-| **Tier 4** | 苯酚/醌式破缺 | `Oc1ccccc1` $\to$ `O=C1C=CCC=C1` | $|\Delta N_{\text{aro}}| > 0$ | 触发告警预警 | **A (100%)** | $\mathbf{5.14}\text{ kcal/mol}$ | 拦截并分流至高精度 DFT 系统 |
+| **Tier 3** | 苯酚/醌式破缺 | `Oc1ccccc1` $\to$ `O=C1C=CCC=C1` | $|\Delta N_{\text{aro}}| > 0$ | 触发告警预警 | **A (100%)** | $\mathbf{5.14}\text{ kcal/mol}$ | 拦截并分流至高精度 DFT 系统 |
