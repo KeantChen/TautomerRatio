@@ -72,17 +72,17 @@ def main():
     print("\n  [Step 2/5] Testing 2D Topological CBH-2 Triage Engine (<1 ms) ...")
     from tautomer_predictor import TautomerPredictor
 
-    # Tier 1: CBH-Taut Subset (Strict Homodesmotic Golden Domain)
+    # Tier 1: CBH-Taut Subset
     triage_1 = TautomerPredictor.triage_check("CC(=O)C1=C(O)CCC1", "C/C(O)=C1\\CCCC1=O")
     assert triage_1['tier'] == 1 and triage_1['subset'] == 'CBH-Taut Subset', f"Expected Tier 1 CBH-Taut Subset, got {triage_1['tier_name']}"
     print(f"    [+] Test 1 (CBH-Taut Subset): Tier {triage_1['tier']} ({triage_1['tier_name']}) -> PASSED")
 
-    # Tier 2: Normal Subset (Standard Comfort Domain)
+    # Tier 2: Normal Subset
     triage_2 = TautomerPredictor.triage_check("OC1=CC=CC=N1", "O=C1NC=CC=C1")
     assert triage_2['tier'] == 2 and triage_2['subset'] == 'Normal Subset', f"Expected Tier 2 Normal Subset, got {triage_2['tier_name']}"
     print(f"    [+] Test 2 (Normal Subset):   Tier {triage_2['tier']} ({triage_2['tier_name']}) -> PASSED")
 
-    # Tier 3: Risk Zone (Aromatic Breakdown Domain)
+    # Tier 3: Risk Zone
     triage_3 = TautomerPredictor.triage_check("Oc1ccccc1", "O=C1C=CC=CC1")
     assert triage_3['tier'] == 3 and triage_3['subset'] == 'Risk Zone', f"Expected Tier 3 Risk Zone, got {triage_3['tier_name']}"
     print(f"    [+] Test 3 (Risk Zone):       Tier {triage_3['tier']} ({triage_3['tier_name']}) -> PASSED")

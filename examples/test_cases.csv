@@ -1,9 +1,13 @@
-id,name,tautomer1,tautomer2,expected_domain,expected_subset,expected_tier,dG_exp,notes
-CASE_01,Acetylcyclopentanone Enol-Enol,CC(=O)C1=C(O)CCC1,C/C(O)=C1\CCCC1=O,Comfort Zone,CBH-Taut Subset,1,-0.10,Strict CBH-Taut homodesmotic pair; exact bond-types and hybridizations 100% conserved across isomers.
-CASE_02,2-Pyridone / 2-Hydroxypyridine,OC1=CC=CC=N1,O=C1NC=CC=C1,Comfort Zone,Normal Subset,2,-2.60,Prototypical lactam-lactim pair on rigid aromatic pyridine ring.
-CASE_03,2-Mercaptopyridine (Thione-Thiol),Sc1ccccn1,S=c1cccc[nH]1,Comfort Zone,Normal Subset,2,-3.80,Thione-thiol aromatic pair; sulfur-nitrogen proton migration.
-CASE_04,2-Aminopyridine (Amine-Imine),Nc1ccccn1,N=c1cccc[nH]1,Comfort Zone,Normal Subset,2,7.10,Exocyclic amino/imino shift on pyridine scaffold.
-CASE_05,Ethyl acetoacetate (Aliphatic Keto-Enol),CCOC(=O)CC(=O)C,CCOC(=O)C=C(C)O,Comfort Zone,Normal Subset,2,0.95,Aliphatic ester keto-enol with conserved aromaticity (|ΔN_aro| = 0).
-CASE_06,Phenol / Cyclohexadienone,Oc1ccccc1,O=C1C=CC=CC1,Risk Zone,Risk Zone,3,14.00,Aromaticity collapse (|ΔN_aro| = 6); severe resonance imbalance and ASE shift.
-CASE_07,Resorcinol Keto-Enol,Oc1cccc(O)c1,O=C1C=CC=C(O)C1,Risk Zone,Risk Zone,3,12.50,Loss of benzene aromatic sextet; flagged for Risk Zone caution.
-CASE_08,Wieder Benchmark Lactam,Cc1cc(O)nc(C)n1,Cc1cc(=O)[nH]c(C)n1,Comfort Zone,Normal Subset,2,-2.40,Dimethylpyrimidine lactam-lactim; benchmark pair from Wieder et al.
+id,name,tautomer1,tautomer2,expected_domain,expected_subset,expected_tier,dG_exp,logK_exp,exp_major,source,notes
+CASE_01,Acetylcyclopentanone (Enol-Enol),CC(=O)C1=C(O)CCC1,C/C(O)=C1\CCCC1=O,Comfort Zone,CBH-Taut Subset,1,-0.82,0.60,B,TautoBase Row 37,CBH-Taut homodesmotic pair; atom hybridizations and bond types conserved.
+CASE_02,Acetylcyclohexanone (Enol-Enol),CC(=O)C1=C(O)CCCC1,C/C(O)=C1\CCCCC1=O,Comfort Zone,CBH-Taut Subset,1,0.76,-0.56,A,TautoBase Row 38,CBH-Taut homodesmotic six-membered ring enol-enol equilibrium.
+CASE_03,Indazole (1H vs 2H),c1ccc2[nH]ncc2c1,c1ccc2n[nH]cc2c1,Comfort Zone,CBH-Taut Subset,1,2.32,-1.70,A,TautoBase Row 1565,Heteroaromatic annular proton shift with conserved CBH-2 bond topology.
+CASE_04,Adenine (9H vs 7H Purine),Nc1ncnc2[nH]cnc12,Nc1ncnc2nc[nH]c12,Comfort Zone,CBH-Taut Subset,1,1.64,-1.20,A,TautoBase Row 1575,Purine nucleobase annular tautomerism in water.
+CASE_05,4-Chloroimidazole (1H vs 3H),Clc1cnc[nH]1,Clc1c[nH]cn1,Comfort Zone,CBH-Taut Subset,1,-2.25,1.65,B,TautoBase Row 1581,Substituted imidazole annular tautomerism in water.
+CASE_06,2-Hydroxypyridine / 2-Pyridone,OC1=CC=CC=N1,O=C1NC=CC=C1,Comfort Zone,Normal Subset,2,-2.60,1.91,B,SAMPL2 / Literature,Prototypical lactam-lactim pair on pyridine scaffold.
+CASE_07,2-Mercaptopyridine (Thiol-Thione),Sc1ccccn1,S=c1cccc[nH]1,Comfort Zone,Normal Subset,2,-3.80,2.79,B,SAMPL2 / Literature,Thione-thiol heteroaromatic proton migration.
+CASE_08,2-Aminopyridine (Amine-Imine),Nc1ccccn1,N=c1cccc[nH]1,Comfort Zone,Normal Subset,2,7.10,-5.20,A,SAMPL2 / Literature,Exocyclic amino-imino shift on pyridine ring.
+CASE_09,Dimethylpyrimidine Lactam-Lactim,Cc1cc(O)nc(C)n1,Cc1cc(=O)[nH]c(C)n1,Comfort Zone,Normal Subset,2,-2.40,1.76,B,Wieder Benchmark,Dimethylpyrimidine lactam-lactim benchmark pair.
+CASE_10,Cyclohexanone (Enol-Keto),OC1=CCCCC1,O=C1CCCCC1,Comfort Zone,Normal Subset,2,-8.72,6.39,B,TautoBase Row 31,Aliphatic cyclic keto-enol equilibrium in water.
+CASE_11,"Phenol / 2,4-Cyclohexadienone",Oc1ccccc1,O=C1C=CC=CC1,Risk Zone,Risk Zone,3,14.00,-10.26,A,TautoBase / Literature,Aromaticity transition (|ΔN_aro| = 6); benzene dearomatization.
+CASE_12,Resorcinol (Aromatic Enol-Keto),Oc1cccc(O)c1,O=C1C=CC=C(O)C1,Risk Zone,Risk Zone,3,12.50,-9.16,A,Literature,Loss of benzene aromaticity (|ΔN_aro| = 6); Risk Zone.

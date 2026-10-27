@@ -1,5 +1,5 @@
 """
-Hydra-PaiNN: Physics-Informed Multi-Tower Delta-Learning and 4-Tier CBH-2 Triage
+Hydra-PaiNN: Physics-Informed Multi-Tower Delta-Learning and 3-Tier Domain Triage
 ================================================================================
 A unified pipeline for predicting tautomeric free energy differences (ΔG_aq),
 equilibrium constants (K_eq), Boltzmann population ratios, and applicability domain.
@@ -536,9 +536,9 @@ class TautomerPredictor:
         Quantum-Topological Applicability Domain & 3-Tier Triage (<1 ms 2D evaluation).
         Partitions pairs into:
           - Comfort Zone (|ΔN_aro| = 0):
-              ↳ CBH-Taut Subset (Tier 1: Strict Homodesmotic Golden Domain)
-              ↳ Normal Subset (Tier 2: Standard Aromatic / Acyclic Comfort Domain)
-          - Risk Zone (|ΔN_aro| > 0, Tier 3: Aromatic Breakdown Domain)
+              ↳ CBH-Taut Subset (Tier 1)
+              ↳ Normal Subset (Tier 2)
+          - Risk Zone (|ΔN_aro| > 0, Tier 3)
         """
         fp_A = cls.extract_cbh2_fingerprint(smiles_A)
         fp_B = cls.extract_cbh2_fingerprint(smiles_B)
@@ -639,7 +639,7 @@ class TautomerPredictor:
         mol_A, sym_A, z_A, coords_A = self.generate_3d_coords(smiles_A)
         mol_B, sym_B, z_B, coords_B = self.generate_3d_coords(smiles_B)
 
-        do_opt = (mode == "three_towers")
+        do_opt = True
         res_xtb_A = self.calculate_xtb_properties(sym_A, coords_A, solvent=solvent, optimize=do_opt, hessian=do_opt)
         res_xtb_B = self.calculate_xtb_properties(sym_B, coords_B, solvent=solvent, optimize=do_opt, hessian=do_opt)
 
@@ -702,8 +702,10 @@ class TautomerPredictor:
                 major = "A"
                 ratio_str = f"{1.0/k_eq:.2f} : 1 (A-dominant)"
 
+            log10_k = -dg / (R_GAS_KCAL * temperature * math.log(10.0))
             return {
                 'delta_G_kcal_mol': float(dg),
+                'log10_K': float(log10_k),
                 'K_eq': float(k_eq),
                 'major_tautomer': major,
                 'ratio': ratio_str,
@@ -769,7 +771,7 @@ class TautomerPredictor:
         print(f"  Backend:      {result['engine_info']['xtb_backend']}")
         print("-" * 78)
         print(f"  [Triage Tier]:  {triage['tier_name']}")
-        print(f"  [Domain]:       {triage['domain']}")
+        print(f"  [Domain]:       {triage['domain']} ({triage.get('subset', '')})")
         print(f"  [Expected MAE]: ~{triage['expected_mae']:.2f} kcal/mol  |  Confidence: {triage['confidence']}")
         print(f"  [Diagnostic]:   {triage['message']}")
         if triage.get('bond_diff_details'):
