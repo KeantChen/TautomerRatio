@@ -170,20 +170,5 @@ TautomerRatio/
 
 ---
 
-## 📖 Citation
-
-If you use Hydra-PaiNN in your research, please cite:
-
-```bibtex
-@article{hydra_painn_2026,
-  title={Physics-Informed Multi-Tower Delta-Learning and Applicability Domain Triage for Aqueous Tautomer Ratios},
-  author={Chen, et al.},
-  journal={Journal of Chemical Information and Modeling},
-  year={2026}
-}
-```
-
----
-
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
