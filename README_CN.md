@@ -1,5 +1,6 @@
 # Hydra-PaiNN: 物理驱动的多塔Δ学习与四级CBH-2拓扑分级水相互变异构体比例预测
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/KeantChen/TautomerRatio/blob/main/notebooks/Hydra_PaiNN_Quickstart.ipynb)
 > **Languages / 语言版本 / Langues** : [中文 (Chinese)](README_CN.md) | [English](README.md) | [Français (French)](README_FR.md)
 
 Hydra-PaiNN 是一个开源的物理信息融合机器学习工作流，用于预测水相中互变异构体对的自由能差（**ΔG_aq**）、平衡常数（**K_eq**）以及玻尔兹曼布居分布。
