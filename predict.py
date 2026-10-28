@@ -2,7 +2,7 @@
 """
 ================================================================================
 Filename: predict.py
-Authors: Cheng Chen, Nicolas Moitessier, Jerome Genzling
+Author: Cheng Chen
 Date file created: 2026-03-01
 Most recent author to change the file: Cheng Chen
 Date last modified: 2026-10-28

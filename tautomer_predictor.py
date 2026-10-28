@@ -1,7 +1,7 @@
 """
 ================================================================================
 Filename: tautomer_predictor.py
-Authors: Cheng Chen, Nicolas Moitessier, Jerome Genzling
+Author: Cheng Chen
 Date file created: 2025-11-15
 Most recent author to change the file: Cheng Chen
 Date last modified: 2026-10-28

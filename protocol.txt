@@ -2,7 +2,7 @@
 # PROTOCOL: Hydra-PaiNN Tautomer Ratio Predictor (Release Repo)
 # Moitessier Research Group - McGill University
 # ==============================================================================
-# Author: Cheng Chen, Jerome Genzling, Nicolas Moitessier
+# Author: Cheng Chen
 # Date: 2026-10-28
 # ==============================================================================
 
@@ -38,9 +38,7 @@ B. Single-Pair Prediction:
 C. Batch Prediction:
     python predict.py --file examples/test_cases.csv --output results.csv
 
-4. CITATION & LAB CONTACT
+4. CITATION & CONTACT
 --------------------------------------------------------------------------------
 - Repository: https://github.com/KeantChen/TautomerRatio
-- Lab Organization: https://github.com/MoitessierLab
 - Primary Contact: Cheng Chen (cheng.chen@mail.mcgill.ca)
-- Principal Investigator: Nicolas Moitessier (nicolas.moitessier@mcgill.ca)
