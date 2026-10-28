@@ -1,5 +1,14 @@
 #!/usr/bin/env python
 """
+================================================================================
+Filename: verify_installation.py
+Authors: Cheng Chen, Nicolas Moitessier, Jerome Genzling
+Date file created: 2026-03-01
+Most recent author to change the file: Cheng Chen
+Date last modified: 2026-10-28
+Description: Comprehensive environment, dependencies, weights, and xTB engine
+             verification test suite for the Hydra-PaiNN release repository.
+================================================================================
 Hydra-PaiNN Installation & Self-Test Verification Script
 ========================================================
 Run this script to verify your environment, dependencies, neural network weights,

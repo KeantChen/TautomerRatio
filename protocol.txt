@@ -1,0 +1,46 @@
+# ==============================================================================
+# PROTOCOL: Hydra-PaiNN Tautomer Ratio Predictor (Release Repo)
+# Moitessier Research Group - McGill University
+# ==============================================================================
+# Author: Cheng Chen, Jerome Genzling, Nicolas Moitessier
+# Date: 2026-10-28
+# ==============================================================================
+
+1. OVERVIEW
+--------------------------------------------------------------------------------
+This repository provides an automated, physics-informed Delta-learning engine
+for rapid aqueous tautomeric equilibrium free energy (Delta G_aq) and Boltzmann
+ratio predictions between tautomer pairs from 2D SMILES strings.
+
+2. ENVIRONMENT REPRODUCTION
+--------------------------------------------------------------------------------
+A. Conda Environment Setup:
+    conda create -n chem python=3.10 -y
+    conda activate chem
+    conda install -c conda-forge rdkit xtb -y
+    pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+    pip install torch_geometric
+    pip install -r requirements.txt
+
+B. Precompiled xTB Engine:
+    Place the precompiled xTB binary under 'bin/' (bin/xtb on Linux, bin/xtb.exe on Windows).
+    Ensure execution permissions:
+        chmod +x bin/xtb
+
+3. VERIFICATION & PREDICTIONS
+--------------------------------------------------------------------------------
+A. System Self-Check:
+    python verify_installation.py
+
+B. Single-Pair Prediction:
+    python predict.py --smiles_A "Oc1ccccn1" --smiles_B "O=c1cccc[nH]1" --mode xtb_only
+
+C. Batch Prediction:
+    python predict.py --file examples/test_cases.csv --output results.csv
+
+4. CITATION & LAB CONTACT
+--------------------------------------------------------------------------------
+- Repository: https://github.com/KeantChen/TautomerRatio
+- Lab Organization: https://github.com/MoitessierLab
+- Primary Contact: Cheng Chen (cheng.chen@mail.mcgill.ca)
+- Principal Investigator: Nicolas Moitessier (nicolas.moitessier@mcgill.ca)

@@ -1,4 +1,14 @@
 """
+================================================================================
+Filename: tautomer_predictor.py
+Authors: Cheng Chen, Nicolas Moitessier, Jerome Genzling
+Date file created: 2025-11-15
+Most recent author to change the file: Cheng Chen
+Date last modified: 2026-10-28
+Description: Core inference engine for aqueous tautomeric free energy difference
+             (Delta G_aq), equilibrium constants, and Boltzmann ratios using
+             Hydra-PaiNN and GFN2-xTB with 3-Tier applicability domain triage.
+================================================================================
 Hydra-PaiNN: Physics-Informed Multi-Tower Delta-Learning and 3-Tier Domain Triage
 ================================================================================
 A unified pipeline for predicting tautomeric free energy differences (ΔG_aq),

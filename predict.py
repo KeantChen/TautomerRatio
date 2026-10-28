@@ -1,5 +1,14 @@
 #!/usr/bin/env python
 """
+================================================================================
+Filename: predict.py
+Authors: Cheng Chen, Nicolas Moitessier, Jerome Genzling
+Date file created: 2026-03-01
+Most recent author to change the file: Cheng Chen
+Date last modified: 2026-10-28
+Description: Command-line interface (CLI) for running single-pair or batch
+             tautomeric free energy and ratio predictions with Hydra-PaiNN.
+================================================================================
 Hydra-PaiNN Prediction CLI
 ==========================
 One-click CLI tool for tautomeric free energy difference (ΔG_aq),
