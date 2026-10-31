@@ -55,7 +55,7 @@ python 07_master_reproduce.py
 
 ## Data Provenance & Original Data Sources
 
-Due to GitHub repository file size limits (<100 MB), the full 1.2 GB Frag20 raw pickle archive (`frag20_taut_train.pl`) and the 650 MB full DFT dataset (`taut_25w_1224.csv`) are maintained in the local Data Management Plan (DMP) archive and will be deposited to an institutional repository upon publication, or provided upon request from the author.
+The complete raw datasets (Frag20-Taut, TautoBase, and SAMPL2) are preserved under the institutional Data Management Plan (DMP) archive and are available upon request or directly through their primary literature sources.
 
 Alternatively, researchers can obtain the full, unmodified raw archives directly from their respective primary literature and data repositories:
 - **Frag20-Taut / SPhysNet-Taut**: The primary raw pickle partitions (`frag20_taut_train.pl`, `frag20_taut_valid.pl`, `frag20_taut_test.pl`) and DFT reference calculations originate from:
