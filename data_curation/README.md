@@ -55,6 +55,6 @@ python 07_master_reproduce.py
 
 ## Data Provenance & Large File Availability
 
-Due to GitHub repository file size limits (<100 MB), the full 1.2 GB Frag20 raw pickle archive (`frag20_taut_train.pl`) and the 650 MB full DFT dataset (`taut_25w_1224.csv`) are archived in institutional repositories (Zenodo DOI: 10.5281/zenodo.XXXXXXX).
+Due to GitHub repository file size limits (<100 MB), the full 1.2 GB Frag20 raw pickle archive (`frag20_taut_train.pl`) and the 650 MB full DFT dataset (`taut_25w_1224.csv`) are maintained in the local Data Management Plan (DMP) archive and will be deposited to an institutional repository (e.g., Zenodo / McGill Dataverse) upon publication, or provided upon request from the author.
 
 A representative 1,000-molecule subset (`raw_data/frag20_taut/frag20_taut_sample_1000.csv`) as well as the complete raw TautoBase (`tautobase_full_raw.csv`) and SAMPL2 (`samplr2_final.csv`) datasets are included directly in this directory for immediate out-of-the-box execution.

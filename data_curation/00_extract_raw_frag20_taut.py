@@ -86,8 +86,8 @@ def main():
         # Check if sample CSV is available in raw_dir
         sample_csv = os.path.join(raw_dir, "frag20_taut_sample_1000.csv")
         if os.path.exists(sample_csv):
-            print(f"[*] Raw .pl archives not found locally (archived on Zenodo).")
-            print(f"    Using authentic sample dataset: {sample_csv}")
+            print(f"[*] Raw .pl archives not found in this lightweight repository.")
+            print(f"    (Full archives are preserved in local DMP storage; using included authentic sample dataset: {sample_csv})")
             sample_df = pd.read_csv(sample_csv, nrows=100 if args.demo else 1000)
             sample_df.to_csv(out_csv, index=False)
             print(f"[+] Successfully copied {len(sample_df):,} sample records to: {out_csv}")
