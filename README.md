@@ -185,5 +185,19 @@ TautomerRatio/
 
 ---
 
+## 🏛️ Data Management Plan (DMP) & Complementary Ecosystem
+
+This open-source repository operates in tandem with the institutional **Data Management Plan (DMP)** of the Moitessier Research Group at McGill University:
+
+* **GitHub Repository (This Tool)**: Focuses on tool usability, production deployment, and user accessibility. It packages pre-trained model weights (`hydra_painn_best.pth`), pre-compiled xTB engines (`bin/xtb.exe`), Google Colab notebooks, and the `data_curation/` verification suite with authentic 1,000-sample benchmarks.
+* **Institutional DMP Archive**: Preserves the complete scientific data provenance trail complying with Canadian funding mandates (Tri-Agency / FRQNT) and journal standards, hosting the full 1.2 GB Frag20-taut raw pickle archives, 651 MB full DFT baseline tables, Wahl & Sander TautoBase Release 3a Excel spreadsheets, and historical notebook audit trails.
+
+Researchers can also trace full raw datasets directly to their original publications:
+1. **Frag20-Taut**: *"Fast and Accurate Prediction of Tautomer Ratios in Aqueous Solution via a Siamese Neural Network"*, *J. Chem. Theory Comput.* 2025, 21 (6), 3132–3142 ([ACS JCTC](https://pubs.acs.org/jctcce/article/21/6/3132/3775827/Fast-and-Accurate-Prediction-of-Tautomer-Ratios-in)).
+2. **TautoBase**: Wahl, J.; Sander, T. *J. Chem. Inf. Model.* 2020, 60 (9), 4172–4189 ([DOI: 10.1021/acs.jcim.0c00713](https://doi.org/10.1021/acs.jcim.0c00713)).
+3. **SAMPL2**: Geballe, M. T.; Guthrie, J. P. *J. Comput. Aided Mol. Des.* 2010, 24 (4), 259–279 ([DOI: 10.1007/s10822-010-9350-8](https://link.springer.com/article/10.1007/s10822-010-9350-8)).
+
+---
+
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
