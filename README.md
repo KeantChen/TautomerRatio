@@ -147,6 +147,21 @@ predictor.print_report(result)
 
 ```text
 TautomerRatio/
+├── data_curation/                   # Data Management Plan (DMP) curation & reproduction
+│   ├── raw_data/                    # Authentic benchmark & sample raw datasets
+│   ├── benchmarks/                  # Curated TautoBase (539) & SAMPL2 (28)
+│   ├── scalers/                     # Fitted standard score feature scalers
+│   ├── 00_extract_raw_frag20_taut.py# Stage 00: Raw .pl partition extraction
+│   ├── 01_curate_frag20_funnel.py   # Stage 01: Table S1 downsampling funnel
+│   ├── 02_run_conformer_and_xtb.py  # Stage 02: 3D conformer & GFN2-xTB featurization
+│   ├── 02b_run_gxtb_and_merge.py    # Stage 02b: g-xTB descriptor integration
+│   ├── 03_build_scaffold_pt_dataset.py# Stage 03: Scaffold split & PyG serialization
+│   ├── 03b_fit_scalers.py           # Stage 03b: Empirical feature scalers
+│   ├── 04_curate_benchmark_datasets.py# Stage 04: TautoBase & SAMPL2 curation
+│   ├── 05_train_hydra_resgnn.py     # Stage 05: Model training pipeline
+│   ├── 06_calibrate_and_evaluate.py # Stage 06: SAMPL2 calibration & TautoBase triage
+│   ├── 07_master_reproduce.py       # Stage 07: One-command master reproduction runner
+│   └── protocol.txt                 # Detailed execution protocol
 ├── notebooks/
 │   └── Hydra_PaiNN_Quickstart.ipynb # Google Colab notebook
 ├── bin/

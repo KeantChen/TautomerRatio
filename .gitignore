@@ -35,3 +35,13 @@ charges
 mol.xyz
 predictions.csv
 test_output*.csv
+
+# Large dataset archives (>50MB) and training artifacts
+*.pl
+data_curation/frag20_curated_150k.csv
+data_curation/Master_Dataset_Final_Train_Ready.csv
+data_curation/dataset_with_xtb_features.csv
+data_curation/taut_extracted_from_pl.csv
+data_curation/pt_datasets/
+data_curation/checkpoints/
+

@@ -1,0 +1,75 @@
+================================================================================
+DATA MANAGEMENT PLAN (DMP) EXECUTION PROTOCOL
+Dataset Curation, Quantum Featurization, Graph Construction, Training & Benchmarking
+================================================================================
+Author: Cheng Chen
+Institution: McGill University / Moitessier Research Group
+Date: 2026-03
+License: MIT
+================================================================================
+
+1. ENVIRONMENT PREREQUISITES
+--------------------------------------------------------------------------------
+- Python: 3.10+
+- Conda Environment: 'chem' or equivalent
+- Key Libraries:
+    torch >= 2.0.0
+    torch_geometric >= 2.3.0
+    rdkit >= 2023.09.0
+    pandas, numpy, scipy, scikit-learn
+- Quantum Chemical Engine:
+    xtb (GFN2-xTB binary) installed and accessible on PATH or specified via --xtb_bin.
+
+2. PIPELINE EXECUTION SEQUENCE
+--------------------------------------------------------------------------------
+Stage 00: Extract Raw Frag20-Taut Partitions
+    Command: python 00_extract_raw_frag20_taut.py [--demo]
+    Inputs:  ../raw_data/frag20_taut/frag20_taut_*.pl
+    Outputs: ../raw_data/frag20_taut/taut_extracted_from_pl.csv
+
+Stage 01: Frag20-Taut Curation Funnel & Capacity-Constrained Downsampling (Table S1)
+    Command: python 01_curate_frag20_funnel.py [--sample_size N]
+    Inputs:  ../raw_data/frag20_taut/taut_25w_1224.csv (or demo sample)
+    Outputs: frag20_curated_150k.csv (154,204 molecules)
+
+Stage 02: 3D Conformer Generation & GFN2-xTB Solvation Featurization
+    Command: python 02_run_conformer_and_xtb.py [--sample_size N]
+    Inputs:  frag20_curated_150k.csv
+    Outputs: dataset_with_xtb_features.csv
+
+Stage 02b: g-xTB Descriptors Integration & Multi-Tower Merging
+    Command: python 02b_run_gxtb_and_merge.py
+    Inputs:  dataset_with_xtb_features.csv
+    Outputs: Master_Dataset_Final_Train_Ready.csv
+
+Stage 03: Bemis-Murcko Scaffold Partition & PyG Tensor Serialization
+    Command: python 03_build_scaffold_pt_dataset.py [--max_samples N]
+    Inputs:  Master_Dataset_Final_Train_Ready.csv
+    Outputs: pt_datasets/train_hydra.pt, pt_datasets/val_hydra.pt, pt_datasets/test_hydra.pt
+
+Stage 03b: Empirical Feature Scaler Fitting
+    Command: python 03b_fit_scalers.py
+    Inputs:  pt_datasets/train_hydra.pt
+    Outputs: scalers/scaler_node.pt, scalers/scaler_global_xtb.pt, scalers/scaler_global_gxtb.pt
+
+Stage 04: Independent Experimental Benchmark Curation & 3-Tier Triage
+    Command: python 04_curate_benchmark_datasets.py
+    Inputs:  ../raw_data/tautobase/tautobase_full_raw.csv, ../raw_data/sampl2/samplr2_final.csv
+    Outputs: benchmarks/tautobase_curated_539.csv, benchmarks/sampl2_curated_28.csv
+
+Stage 05: Hydra-ResGNN Architecture Training
+    Command: python 05_train_hydra_resgnn.py [--epochs E] [--batch_size B]
+    Inputs:  pt_datasets/*.pt, scalers/*.pt
+    Outputs: checkpoints/hydra_resgnn_best.pt
+
+Stage 06: Curvature Calibration & Zero-Shot TautoBase Evaluation (Table 2 & Table 3)
+    Command: python 06_calibrate_and_evaluate.py
+    Inputs:  ../raw_data/sampl2/sampl2_raw_and_calibration_data.csv, benchmarks/tautobase_curated_539.csv
+    Outputs: Printed evaluation metrics reproducing Table 2 & Table 3.
+
+Stage 07: Master End-to-End Automated Verification
+    Command: python 07_master_reproduce.py
+    Executes the entire verification test suite in under 30 seconds.
+
+================================================================================
+EOF

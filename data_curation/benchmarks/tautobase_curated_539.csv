@@ -1,0 +1,525 @@
+pair_id,smiles_A,smiles_B,log_K,exp_dG,tier,tier_name,status
+TB_0001,OC1=CCCC1,O=C1CCCC1,7.94,-10.832120846017128,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0002,OC1=CCCCC1,O=C1CCCCC1,6.39,-8.717538061215294,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0003,OC1=CCCCCC1,O=C1CCCCCC1,8.0,-10.913975663493327,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0004,CC(=O)C1=C(O)CCC1,CC(=O)C1CCCC1=O,1.45,-1.9781580890081654,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0005,CC(=O)C1=C(O)CCCC1,CC(=O)C1CCCCC1=O,0.49,-0.6684810093889663,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0006,CC(=O)C1=C(O)CCC1,C/C(O)=C1\CCCC1=O,0.6,-0.8185481747619995,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0007,CC(=O)C1=C(O)CCCC1,C/C(O)=C1\CCCCC1=O,-0.56,0.763978296444533,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0008,CC=O,C=CO,-6.23,8.499258547945429,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0009,CC(=O)c1ccccc1,C=C(O)c1ccccc1,-7.97,10.873048254755226,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0010,CCC(C)=O,C/C=C(/C)O,-7.51,10.24549465410436,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0011,CC(C)C=O,CC(C)=CO,-3.86,5.26599325763553,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0012,CC(=O)C(C)C,CC(C)=C(C)O,-7.33,9.999930201675761,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0013,CC(C)C(=O)c1ccccc1,CC(C)=C(O)c1ccccc1,-6.48,8.840320287429595,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0014,O=CCc1ccccc1,O/C=C\c1ccccc1,-3.07,4.188238160865564,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0015,CC(=O)Cc1ccccc1,C/C(O)=C/c1ccccc1,-6.4,8.731180530794662,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0016,O=C(Cc1ccccc1)c1ccccc1,O/C(=C\c1ccccc1)c1ccccc1,-5.15,7.02587183337383,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0017,O=CC(c1ccccc1)c1ccccc1,OC=C(c1ccccc1)c1ccccc1,0.98,-1.3369620187779325,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0018,COCC(=O)c1ccccc1,CO/C=C(\O)c1ccccc1,-6.47,8.826677817850227,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0019,O=C1Cc2ccccc2C1,OC1=Cc2ccccc2C1,-3.84,5.238708318476797,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0020,O=C1CCc2ccccc21,OC1=CCc2ccccc21,-7.48,10.204567245366261,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0021,CCC(C)=O,C=C(O)CC,-8.76,11.950803351525192,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0022,O=CC1c2ccccc2-c2ccccc21,OC=C1c2ccccc2-c2ccccc21,1.22,-1.6643812886827323,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0023,CC(=O)C1c2ccccc2-c2ccccc21,CC(O)=C1c2ccccc2-c2ccccc21,-2.28,3.110483064095598,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0024,O=C(c1ccccc1)C1c2ccccc2-c2ccccc21,OC(=C1c2ccccc2-c2ccccc21)c1ccccc1,-1.91,2.6057116896590315,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0025,CC1SC(c2ccccc2)=NC1=O,Cc1sc(-c2ccccc2)nc1O,0.6,-0.8185481747619995,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0026,O=C1CSC(c2ccccc2)=N1,Oc1csc(-c2ccccc2)n1,-1.0,1.3642469579366658,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0027,O=C1CC(=O)NC(=O)N1,O=c1cc(O)[nH]c(=O)[nH]1,-1.7,2.319219828492332,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0028,CC1C(=O)NC(=O)NC1=O,Cc1c(O)[nH]c(=O)[nH]c1=O,-1.2,1.637096349523999,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0029,CCC1C(=O)NC(=O)NC1=O,CCc1c(O)[nH]c(=O)[nH]c1=O,-1.4,1.909945741111332,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0030,CC(C)C1C(=O)NC(=O)NC1=O,CC(C)c1c(O)[nH]c(=O)[nH]c1=O,-2.5,3.4106173948416645,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0031,O=C1NC(=O)C(c2ccccc2)C(=O)N1,O=c1[nH]c(O)c(-c2ccccc2)c(=O)[nH]1,0.1,-0.1364246957936666,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0032,O=C1NC(=O)C(Cl)C(=O)N1,O=c1[nH]c(O)c(Cl)c(=O)[nH]1,-0.76,1.036827688031866,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0033,O=C1NC(=O)C(Br)C(=O)N1,O=c1[nH]c(O)c(Br)c(=O)[nH]1,-0.21,0.28649186116669983,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0034,CC1(C)CC(=O)CC(=O)C1,CC1(C)CC(=O)C=C(O)C1,1.3,-1.7735210453176657,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0035,CCC1C(=O)CC(C)(C)CC1=O,CCC1=C(O)CC(C)(C)CC1=O,2.1,-2.8649186116669982,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0036,CC(C)=O,C=C(C)O,-8.63,11.773451246993428,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0037,CC(=O)C(C)C,C=C(O)C(C)C,-8.61,11.746166307834692,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0038,CC(=O)C(C)(C)C,C=C(O)C(C)(C)C,-8.76,11.950803351525192,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0039,O=C1CCCCC1,OC1=CCCCC1,-6.69,9.126812148596295,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0040,O=C1CCCc2ccccc21,OC1=CCCc2ccccc21,-7.31,9.972645262517027,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0041,O=C1CCCC1,OC1=CCCC1,-8.24,11.241394933398126,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0042,COc1ccc(C(C)=O)cc1,C=C(O)c1ccc(OC)cc1,-8.8,12.005373229842661,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0043,CC(=O)c1ccc([N+](=O)[O-])cc1,C=C(O)c1ccc([N+](=O)[O-])cc1,-6.69,9.126812148596295,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0044,O=C(Cc1ccccc1)c1cccs1,O/C(=C\c1ccccc1)c1cccs1,-6.45,8.799392878691496,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0045,O=C(Cc1ccccc1)c1ccco1,O/C(=C\c1ccccc1)c1ccco1,-5.9,8.04905705182633,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0046,O=C(Cc1ccccc1)c1ccncc1,O/C(=C\c1ccccc1)c1ccncc1,-3.1,4.229165569603664,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0047,O=C(Cc1ccccc1)c1cccnc1,O/C(=C\c1ccccc1)c1cccnc1,-4.2,5.7298372233339965,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0048,O=C(Cc1ccccc1)c1ccccn1,O/C(=C\c1ccccc1)c1ccccn1,-3.35,4.570227309087831,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0049,O=C(Cc1ccccc1)c1cnccn1,O/C(=C\c1ccccc1)c1cnccn1,-2.9,3.9563161780163307,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0050,O=C(Cc1cccnc1)c1ccccc1,O/C(=C\c1cccnc1)c1ccccc1,-4.87,6.643882685151563,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0051,O=C(Cc1ccncc1)c1ccccc1,O/C(=C\c1ccncc1)c1ccccc1,-4.37,5.96175920618323,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0052,O=C(Cc1ccccn1)c1ccccc1,O/C(=C\c1ccccn1)c1ccccc1,-1.97,2.6875665071352315,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0053,O=C(Cc1cnccn1)c1ccccc1,O/C(=C\c1cnccn1)c1ccccc1,-2.07,2.823991202928898,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0054,O=C(Cc1ccnc2ccccc12)c1ccccc1,O/C(=C\c1ccnc2ccccc12)c1ccccc1,-4.2,5.7298372233339965,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0055,CCOC(C)=O,C=C(O)OCC,-18.6,25.374993417621987,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0056,CCC(=O)O,CC=C(O)O,-17.6,24.010746459685322,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0057,CC(=O)C(C)=O,C=C(O)C(C)=O,-4.85,6.616597745992829,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0058,O=C1CC=CC=CC1,OC1=CC=CC=CC1,-1.0,1.3642469579366658,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0059,O=C1C=CC=CC1,Oc1ccccc1,13.0,-17.735210453176656,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0060,O=C1C=CCC=C1,Oc1ccccc1,10.98,-14.979431598144592,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0061,O=C1CC=Cc2ccccc21,Oc1cccc2ccccc12,7.14,-9.740723279667794,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0062,O=C1C=CCc2ccccc21,Oc1cccc2ccccc12,6.17,-8.417403730469228,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0063,O=C1c2ccccc2Cc2ccccc21,Oc1c2ccccc2cc2ccccc12,-2.1,2.8649186116669982,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0064,O=C1C=C(N2CCCC2)C=C(N2CCCC2)C1,Oc1cc(N2CCCC2)cc(N2CCCC2)c1,-1.0,1.3642469579366658,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0065,O=C1Cc2ccccc2O1,Oc1cc2ccccc2o1,-5.2,7.094084181270663,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0066,O=C1Cc2ccccc2N1,Oc1cc2ccccc2[nH]1,-6.5,8.867605226588328,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0067,O=C1C=CSC1,Oc1ccsc1,0.47,-0.641196070230233,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0068,O=C1C=CNC1,Oc1cc[nH]c1,-0.89,1.2141797925636326,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0069,CN1C=CC(=O)C1,Cn1ccc(O)c1,-0.74,1.0095427488731328,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0070,O=C1COc2ccccc21,Oc1coc2ccccc12,-4.06,5.538842649222863,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0071,O=C1CSc2ccccc21,Oc1csc2ccccc12,-1.1,1.5006716537303326,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0072,O=C1CNc2ccccc21,Oc1c[nH]c2ccccc12,-1.07,1.4597442449922324,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0073,CN1CC(=O)c2ccccc21,Cn1cc(O)c2ccccc21,-0.52,0.7094084181270662,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0074,O=C1N=C(c2ccccc2)OC1c1ccccc1,Oc1nc(-c2ccccc2)oc1-c1ccccc1,-1.3,1.7735210453176657,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0075,CC(=O)c1c(C)cc(C)cc1C,C=C(O)c1c(C)cc(C)cc1C,-6.92,9.440588948921727,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0076,CC(=S)c1c(C)cc(C)cc1C,C=C(S)c1c(C)cc(C)cc1C,-0.94,1.282392140460466,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0077,O=C(O)C1c2ccccc2-c2ccccc21,OC(O)=C1c2ccccc2-c2ccccc21,-9.5,12.960346100398326,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0078,COC(=S)C1c2ccccc2-c2ccccc21,COC(S)=C1c2ccccc2-c2ccccc21,-5.8,7.9126323560326615,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0079,CC1=Nc2ccccc2CC1,CC1=CCc2ccccc2N1,-2.4,3.274192699047998,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0080,Cc1ccccn1,C=C1C=CC=CN1,-13.0,17.735210453176656,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0081,Cc1ccncc1,C=C1C=CNC=C1,-13.2,18.008059844763988,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0082,CCNc1cc2ccccc2n1C,CC/N=C1\Cc2ccccc2N1C,0.0,-0.0,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0083,CN1C(=N)Cc2ccccc21,Cn1c(N)cc2ccccc21,-1.4,1.909945741111332,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0084,CC[N+](=O)[O-],C/C=[N+](/[O-])O,-6.9,9.413304009762994,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0085,CCC[N+](=O)[O-],CC/C=[N+](/[O-])O,-4.1,5.5934125275403295,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0086,CCCC[N+](=O)[O-],CCC/C=[N+](/[O-])O,-4.4,6.0026866149213305,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0087,CC(C)C[N+](=O)[O-],CC(C)/C=[N+](/[O-])O,-2.6,3.5470420906353315,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0088,O=[N+]([O-])CCc1ccccc1,[O-]/[N+](O)=C/Cc1ccccc1,-2.9,3.9563161780163307,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0089,O=[N+]([O-])CC1CCCCC1,[O-]/[N+](O)=C/C1CCCCC1,-1.9,2.592069220079665,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0090,CNC#N,CN=C=N,-6.0,8.185481747619995,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0091,CC(=O)CC(C)=O,CC(=O)/C=C(/C)O,-0.83,1.1323249750874327,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0092,CC1(C)OC(=O)CC(=O)O1,CC1(C)OC(=O)C=C(O)O1,-2.35,3.205980351151165,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0093,CCOC(=O)CC(=O)OCC,CCOC(=O)/C=C(\O)OCC,-7.4,10.095427488731328,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0094,O=C1CCOC(=O)C1,O=C1C=C(O)OCC1,-2.35,3.205980351151165,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0095,O=C1CCOC(=O)C1,O=C1C=C(O)CCO1,1.28,-1.7462361061589322,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0096,O=C1C=C(O)OCC1,O=C1C=C(O)CCO1,3.0,-4.092740873809998,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0097,O=c1cccc(O)[nH]1,Oc1cccc(O)n1,-1.3,1.7735210453176657,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0098,O=C1Cc2ccccc2C(=O)N1,O=C1N=C(O)Cc2ccccc21,-1.6,2.1827951326986654,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0099,O=C1c2ccccc2C(=O)C1[N+](=O)[O-],O=C1C([N+](=O)[O-])=C(O)c2ccccc21,1.7,-2.319219828492332,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0100,CCOC(=O)C1C(=O)ON=C1C,CCOC(=O)c1c(C)noc1O,-1.2,1.637096349523999,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0101,O=C(C[N+](=O)[O-])c1ccccc1,O=[N+]([O-])/C=C(\O)c1ccccc1,-2.3,3.1377680032543314,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0102,CCOC(=O)CC(C)=O,CCOC(=O)/C=C(/C)O,-1.06,1.4461017754128658,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0103,COC(=O)CC(=O)c1ccccn1,COC(=O)/C=C(\O)c1ccccn1,-0.07,0.09549728705556662,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0104,O=C1CCCC2COC(=O)C12,O=C1OCC2CCCC(O)=C12,-1.62,2.2100800718573987,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0105,O=C1c2ccccc2CC1[N+](=O)[O-],O=[N+]([O-])C1=C(O)c2ccccc2C1,-1.7,2.319219828492332,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0106,O=C1CCCCC1[N+](=O)[O-],O=[N+]([O-])C1=C(O)CCCC1,-1.3,1.7735210453176657,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0107,CCOC(=O)CC#N,CCO/C(O)=C/C#N,-9.6,13.096770796191992,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0108,CCOC(=O)CC(=O)C(C)=O,CCOC(=O)/C=C(\O)C(C)=O,2.0,-2.7284939158733317,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0109,CCOc1cc(C)n[nH]1,CCOc1cc(C)[nH]n1,1.48,-2.0190854977462656,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0110,c1ccc2n[nH]cc2c1,c1ccc2[nH]ncc2c1,1.7,-2.319219828492332,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0111,CC1=NN(c2ccccc2)C(=O)C1,Cc1cc(O)n(-c2ccccc2)n1,-0.63,0.8594755835000994,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0112,CC1=NN(c2ccccc2)C(=O)C1,Cc1cc(=O)n(-c2ccccc2)[nH]1,0.9,-1.2278222621429993,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0113,Cc1cc(O)n(-c2ccccc2)n1,Cc1cc(=O)n(-c2ccccc2)[nH]1,1.6,-2.1827951326986654,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0114,CC(C)(C)C(=O)Cc1ccc2ccccc2n1,CC(C)(C)C(=O)/C=C1/C=Cc2ccccc2N1,-0.26,0.3547042090635331,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0115,CC(=O)Cc1nc(-c2ccccc2)cs1,C/C(O)=C/c1nc(-c2ccccc2)cs1,-2.0,2.7284939158733317,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0116,O=C(Cc1ccccn1)c1ccccc1,O=C(/C=C1\C=CC=CN1)c1ccccc1,-1.05,1.4324593058334991,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0117,O/C(=C\c1ccccn1)c1ccccc1,O=C(/C=C1\C=CC=CN1)c1ccccc1,0.95,-1.2960346100398326,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0118,O=C(Cc1ccc2ccccc2n1)c1ccccc1,O/C(=C\c1ccc2ccccc2n1)c1ccccc1,-1.3,1.7735210453176657,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0119,O=C(Cc1ccc2ccccc2n1)c1ccccc1,O=C(/C=C1\C=Cc2ccccc2N1)c1ccccc1,1.09,-1.487029184150966,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0120,O/C(=C\c1ccc2ccccc2n1)c1ccccc1,O=C(/C=C1\C=Cc2ccccc2N1)c1ccccc1,2.4,-3.274192699047998,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0121,O=C(Cc1ccncc1)c1ccccc1,O=C(/C=C1\C=CN=CC1)c1ccccc1,-2.42,3.3014776382067312,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0122,O/C(=C\c1ccncc1)c1ccccc1,O=C(/C=C1\C=CN=CC1)c1ccccc1,2.0,-2.7284939158733317,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0123,O=C(Cc1ccnc2ccccc12)c1ccccc1,O=C(/C=C1/CC=Nc2ccccc21)c1ccccc1,-2.3,3.1377680032543314,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0124,O/C(=C\c1ccnc2ccccc12)c1ccccc1,O=C(/C=C1/CC=Nc2ccccc21)c1ccccc1,1.9,-2.592069220079665,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0125,CC/N=C1/C=C(O)CCC1,CC/N=C1\CCCC(=O)C1,8.7,-11.868948534048991,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0126,CC1(C)CC(=O)C/C(=N/Nc2ccccc2)C1,CC1(C)CC(=O)C=C(NNc2ccccc2)C1,2.5,-3.4106173948416645,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0127,CC1=Nc2ccncc2NC(=O)C1,CC1=CC(=O)Nc2cnccc2N1,0.9,-1.2278222621429993,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0128,Oc1ccncc1,O=c1cc[nH]cc1,3.9,-5.320563135952996,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0129,Nc1cc(O)ccn1,Nc1cc(=O)cc[nH]1,3.1,-4.229165569603664,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0130,Cc1cc(O)cc(C)n1,Cc1cc(=O)cc(C)[nH]1,4.2,-5.7298372233339965,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0131,Oc1ccnc(Cl)c1,O=c1cc[nH]c(Cl)c1,0.2,-0.2728493915873332,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0132,CCOC(=O)c1cc(O)cc(C(=O)OCC)n1,CCOC(=O)c1cc(=O)cc(C(=O)OCC)[nH]1,-0.6,0.8185481747619995,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0133,Nc1cnccc1O,Nc1c[nH]ccc1=O,4.1,-5.5934125275403295,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0134,O=[N+]([O-])c1cnccc1O,O=c1cc[nH]cc1[N+](=O)[O-],3.9,-5.320563135952996,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0135,Oc1c(Cl)cncc1Cl,O=c1c(Cl)c[nH]cc1Cl,2.9,-3.9563161780163307,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0136,Cc1cc(O)ccn1,Cc1cc(=O)cc[nH]1,4.2,-5.7298372233339965,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0137,Cc1cnccc1O,Cc1c[nH]ccc1=O,4.2,-5.7298372233339965,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0138,Oc1ccnc(-c2ccccc2)c1,O=c1cc[nH]c(-c2ccccc2)c1,2.9,-3.9563161780163307,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0139,Oc1ccncc1-c1ccccc1,O=c1cc[nH]cc1-c1ccccc1,3.9,-5.320563135952996,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0140,CC(=O)c1cc(O)ccn1,CC(=O)c1cc(=O)cc[nH]1,2.0,-2.7284939158733317,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0141,CC(=O)c1cnccc1O,CC(=O)c1c[nH]ccc1=O,3.6,-4.911289048571997,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0142,COC(=O)c1cc(O)ccn1,COC(=O)c1cc(=O)cc[nH]1,1.9,-2.592069220079665,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0143,COC(=O)c1cnccc1O,COC(=O)c1c[nH]ccc1=O,3.6,-4.911289048571997,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0144,CC(=O)Nc1cc(O)ccn1,CC(=O)Nc1cc(=O)cc[nH]1,1.5,-2.046370436904999,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0145,CC(=O)Nc1cnccc1O,CC(=O)Nc1c[nH]ccc1=O,3.8,-5.18413844015933,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0146,CSc1cc(O)ccn1,CSc1cc(=O)cc[nH]1,1.3,-1.7735210453176657,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0147,CSc1cnccc1O,CSc1c[nH]ccc1=O,3.8,-5.18413844015933,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0148,Oc1ccnc(C(F)(F)F)c1,O=c1cc[nH]c(C(F)(F)F)c1,1.2,-1.637096349523999,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0149,Oc1ccncc1C(F)(F)F,O=c1cc[nH]cc1C(F)(F)F,3.6,-4.911289048571997,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0150,COc1cc(O)ccn1,COc1cc(=O)cc[nH]1,1.1,-1.5006716537303326,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0151,COc1cnccc1O,COc1c[nH]ccc1=O,3.9,-5.320563135952996,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0152,CC(=O)Oc1cc(O)ccn1,CC(=O)Oc1cc(=O)cc[nH]1,0.9,-1.2278222621429993,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0153,CC(=O)Oc1cnccc1O,CC(=O)Oc1c[nH]ccc1=O,3.7,-5.047713744365664,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0154,Oc1ccnc(I)c1,O=c1cc[nH]c(I)c1,0.8,-1.0913975663493327,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0155,Oc1ccncc1I,O=c1cc[nH]cc1I,3.7,-5.047713744365664,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0156,Oc1ccnc(Oc2ccccc2)c1,O=c1cc[nH]c(Oc2ccccc2)c1,0.5,-0.6821234789683329,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0157,Oc1ccncc1Oc1ccccc1,O=c1cc[nH]cc1Oc1ccccc1,3.8,-5.18413844015933,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0158,Oc1ccncc1Cl,O=c1cc[nH]cc1Cl,3.7,-5.047713744365664,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0159,Oc1ccnc(Br)c1,O=c1cc[nH]c(Br)c1,0.1,-0.1364246957936666,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0160,Oc1ccncc1Br,O=c1cc[nH]cc1Br,3.7,-5.047713744365664,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0161,N#Cc1cc(O)ccn1,N#Cc1cc(=O)cc[nH]1,-0.1,0.1364246957936666,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0162,N#Cc1cnccc1O,N#Cc1c[nH]ccc1=O,3.5,-4.77486435277833,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0163,COS(=O)c1cc(O)ccn1,COS(=O)c1cc(=O)cc[nH]1,-0.2,0.2728493915873332,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0164,COS(=O)c1cnccc1O,COS(=O)c1c[nH]ccc1=O,3.5,-4.77486435277833,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0165,Oc1ccnc(F)c1,O=c1cc[nH]c(F)c1,-0.6,0.8185481747619995,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0166,Oc1ccncc1F,O=c1cc[nH]cc1F,3.7,-5.047713744365664,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0167,O=[N+]([O-])c1cc(O)ccn1,O=c1cc[nH]c([N+](=O)[O-])c1,-0.8,1.0913975663493327,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0168,Oc1ccnc2ccccc12,O=c1cc[nH]c2ccccc12,4.9,-6.684810093889663,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0169,Cc1cc(O)c2ccccc2n1,Cc1cc(=O)c2ccccc2[nH]1,5.2,-7.094084181270663,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0170,Cc1cnc2ccccc2c1O,Cc1c[nH]c2ccccc2c1=O,5.2,-7.094084181270663,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0171,Nc1cc(O)c2ccccc2n1,Nc1cc(=O)c2ccccc2[nH]1,4.1,-5.5934125275403295,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0172,Nc1cnc2ccccc2c1O,Nc1c[nH]c2ccccc2c1=O,5.0,-6.821234789683329,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0173,Oc1cc(-c2ccccc2)nc2ccccc12,O=c1cc(-c2ccccc2)[nH]c2ccccc12,3.9,-5.320563135952996,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0174,Oc1c(-c2ccccc2)cnc2ccccc12,O=c1c(-c2ccccc2)c[nH]c2ccccc12,4.9,-6.684810093889663,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0175,COCc1cc(O)c2ccccc2n1,COCc1cc(=O)c2ccccc2[nH]1,3.0,-4.092740873809998,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0176,COCc1cnc2ccccc2c1O,COCc1c[nH]c2ccccc2c1=O,4.6,-6.275536006508663,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0177,COC(=O)c1cc(O)c2ccccc2n1,COC(=O)c1cc(=O)c2ccccc2[nH]1,2.9,-3.9563161780163307,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0178,COC(=O)c1cnc2ccccc2c1O,COC(=O)c1c[nH]c2ccccc2c1=O,4.6,-6.275536006508663,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0179,COCNc1cc(O)c2ccccc2n1,COCNc1cc(=O)c2ccccc2[nH]1,2.5,-3.4106173948416645,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0180,COCNc1cnc2ccccc2c1O,COCNc1c[nH]c2ccccc2c1=O,4.8,-6.548385398095996,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0181,CSc1cc(O)c2ccccc2n1,CSc1cc(=O)c2ccccc2[nH]1,2.3,-3.1377680032543314,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0182,CSc1cnc2ccccc2c1O,CSc1c[nH]c2ccccc2c1=O,4.8,-6.548385398095996,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0183,Oc1cc(C(F)(F)F)nc2ccccc12,O=c1cc(C(F)(F)F)[nH]c2ccccc12,2.2,-3.0013433074606652,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0184,Oc1c(C(F)(F)F)cnc2ccccc12,O=c1c(C(F)(F)F)c[nH]c2ccccc12,4.6,-6.275536006508663,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0185,COc1cc(O)c2ccccc2n1,COc1cc(=O)c2ccccc2[nH]1,2.1,-2.8649186116669982,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0186,COc1cnc2ccccc2c1O,COc1c[nH]c2ccccc2c1=O,4.9,-6.684810093889663,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0187,CC(=O)Oc1cc(O)c2ccccc2n1,CC(=O)Oc1cc(=O)c2ccccc2[nH]1,1.9,-2.592069220079665,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0188,CC(=O)Oc1cnc2ccccc2c1O,CC(=O)Oc1c[nH]c2ccccc2c1=O,4.7,-6.41196070230233,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0189,Oc1cc(I)nc2ccccc12,O=c1cc(I)[nH]c2ccccc12,1.8,-2.4556445242859986,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0190,Oc1c(I)cnc2ccccc12,O=c1c(I)c[nH]c2ccccc12,4.7,-6.41196070230233,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0191,Oc1cc(Oc2ccccc2)nc2ccccc12,O=c1cc(Oc2ccccc2)[nH]c2ccccc12,1.5,-2.046370436904999,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0192,Oc1c(Oc2ccccc2)cnc2ccccc12,O=c1c(Oc2ccccc2)c[nH]c2ccccc12,4.8,-6.548385398095996,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0193,Oc1cc(Cl)nc2ccccc12,O=c1cc(Cl)[nH]c2ccccc12,1.2,-1.637096349523999,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0194,Oc1c(Cl)cnc2ccccc12,O=c1c(Cl)c[nH]c2ccccc12,4.7,-6.41196070230233,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0195,Oc1cc(Br)nc2ccccc12,O=c1cc(Br)[nH]c2ccccc12,1.1,-1.5006716537303326,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0196,Oc1c(Br)cnc2ccccc12,O=c1c(Br)c[nH]c2ccccc12,4.7,-6.41196070230233,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0197,N#Cc1cc(O)c2ccccc2n1,N#Cc1cc(=O)c2ccccc2[nH]1,0.9,-1.2278222621429993,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0198,N#Cc1cnc2ccccc2c1O,N#Cc1c[nH]c2ccccc2c1=O,4.5,-6.139111310714997,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0199,COS(=O)c1cc(O)c2ccccc2n1,COS(=O)c1cc(=O)c2ccccc2[nH]1,0.8,-1.0913975663493327,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0200,COS(=O)c1cnc2ccccc2c1O,COS(=O)c1c[nH]c2ccccc2c1=O,4.5,-6.139111310714997,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0201,Oc1cc(F)nc2ccccc12,O=c1cc(F)[nH]c2ccccc12,0.4,-0.5456987831746664,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0202,Oc1c(F)cnc2ccccc12,O=c1c(F)c[nH]c2ccccc12,4.7,-6.41196070230233,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0203,O=[N+]([O-])c1cc(O)c2ccccc2n1,O=c1cc([N+](=O)[O-])[nH]c2ccccc12,0.2,-0.2728493915873332,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0204,O=[N+]([O-])c1cnc2ccccc2c1O,O=c1c([N+](=O)[O-])c[nH]c2ccccc12,4.4,-6.0026866149213305,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0205,Oc1c2ccccc2nc2ccccc12,O=c1c2ccccc2[nH]c2ccccc12,7.8,-10.641126271905993,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0206,Oc1ccnnc1,O=c1cc[nH]nc1,3.1,-4.229165569603664,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0207,Oc1cnnc2ccccc12,O=c1cn[nH]c2ccccc12,4.1,-5.5934125275403295,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0208,Oc1ccnc2cccnc12,O=c1cc[nH]c2cccnc12,4.4,-6.0026866149213305,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0209,COCc1c(-c2ccccc2)nc2ccccc2c1O,COCc1c(-c2ccccc2)[nH]c2ccccc2c1=O,3.6,-4.911289048571997,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0210,CCSc1nc2ccccc2c(O)c1C(=O)OC,CCSc1[nH]c2ccccc2c(=O)c1C(=O)OC,2.0,-2.7284939158733317,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0211,O=c1cc[nH]c2ccc3c(Cl)ccnc3c12,Oc1ccnc2ccc3c(Cl)ccnc3c12,1.4,-1.909945741111332,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0212,O=c1cc[nH]c2ccc3c(O)ccnc3c12,O=c1cc[nH]c2c1ccc1[nH]ccc(=O)c12,6.4,-8.731180530794662,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0213,c1ccc(Cc2ccccn2)cc1,C1=CNC(=Cc2ccccc2)C=C1,-11.6,15.825264712065323,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0214,O=S(Cc1ccccn1)Oc1ccccc1,O=S(/C=C1\C=CC=CN1)Oc1ccccc1,-7.6,10.36827688031866,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0215,CCOC(=O)Cc1ccccn1,CCOC(=O)/C=C1\C=CC=CN1,-6.4,8.731180530794662,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0216,O=[N+]([O-])Cc1ccccn1,O=[N+]([O-])/C=C1\C=CC=CN1,-4.9,6.684810093889663,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0217,CCOC(=O)CC1=NCCCS1,CCOC(=O)/C=C1\NCCCS1,-0.3,0.40927408738099974,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0218,CCOC(=O)C(=O)Cc1ccccn1,CCOC(=O)/C(O)=C/c1ccccn1,2.0,-2.7284939158733317,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0219,CCOC(=O)Cc1nc2ccccc2n(C)c1=O,CCOC(=O)/C=C1/Nc2ccccc2N(C)C1=O,-1.03,1.4051743666747658,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0220,CCOC(=O)C(C(=O)OCC)c1ccc2cc(Cl)ccc2n1,CCOC(=O)C(C(=O)OCC)=C1C=Cc2cc(Cl)ccc2N1,-1.0,1.3642469579366658,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0221,CC(C(=O)O)c1nc(-c2ccccc2)cs1,C/C(C(=O)O)=C1/NC(c2ccccc2)=CS1,-5.0,6.821234789683329,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0222,CC(C(=O)c1ccccc1)c1nc(-c2ccccc2)cs1,C/C(C(=O)c1ccccc1)=C1/NC(c2ccccc2)=CS1,-3.0,4.092740873809998,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0223,CCOC(=O)C(C(=O)OCC)c1nc(-c2ccccc2)cs1,CCOC(=O)C(C(=O)OCC)=C1NC(c2ccccc2)=CS1,-1.0,1.3642469579366658,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0224,Oc1ccc2ccccc2c1/C=N/c1ccccc1,O=C1C=Cc2ccccc2/C1=C/Nc1ccccc1,0.43,-0.5866261919127663,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0225,Oc1c(/C=N/c2ccccc2)ccc2ccccc12,O=C1/C(=C\Nc2ccccc2)C=Cc2ccccc21,0.49,-0.6684810093889663,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0226,C/N=C/c1c(O)ccc2ccccc12,CN/C=C1\C(=O)C=Cc2ccccc21,1.86,-2.5374993417621985,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0227,Oc1ccc2ccccc2c1/N=N/c1ccccc1,O=C1C=Cc2ccccc2/C1=N/Nc1ccccc1,0.42,-0.5729837223333997,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0228,Oc1c(/N=N/c2ccccc2)ccc2ccccc12,O=C1/C(=N/Nc2ccccc2)C=Cc2ccccc21,0.51,-0.6957659485476996,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0229,Oc1ccc(/N=N/c2ccccc2)c2ccccc12,O=C1C=C/C(=N\Nc2ccccc2)c2ccccc21,0.61,-0.8321906443413661,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0230,Sc1ccncc1,S=c1cc[nH]cc1,4.5,-6.139111310714997,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0231,Sc1ccnc2ccccc12,S=c1cc[nH]c2ccccc12,5.0,-6.821234789683329,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0232,Sc1ccnnc1,S=c1cc[nH]nc1,4.0,-5.456987831746663,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0233,Sc1cnnc2ccccc12,S=c1cn[nH]c2ccccc12,4.9,-6.684810093889663,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0234,c1ccc(OCCc2ccccn2)cc1,C1=CN/C(=C\COc2ccccc2)C=C1,-1.05,1.4324593058334991,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0235,C/N=C(\C)c1ccccc1O,CN/C(C)=C1/C=CC=CC1=O,0.6,-0.8185481747619995,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0236,C/N=N/c1ccccc1O,CN/N=C1/C=CC=CC1=O,0.2,-0.2728493915873332,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0237,Oc1ccccc1/N=N/c1ccccc1,O=C1C=CC=C/C1=N/Nc1ccccc1,-1.1,1.5006716537303326,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0238,CCOC(=O)c1c(-c2ccccc2)nc2ccccc2c1O,CCOC(=O)c1c(-c2ccccc2)[nH]c2ccccc2c1=O,3.6,-4.911289048571997,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0239,O=[N+]([O-])c1ccc2[nH]ncc2c1,O=[N+]([O-])c1ccc2n[nH]cc2c1,-1.7,2.319219828492332,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0240,O=[N+]([O-])c1ccc2cn[nH]c2c1,O=[N+]([O-])c1ccc2c[nH]nc2c1,-1.7,2.319219828492332,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0241,Nc1ncnc2[nH]ncc12,Nc1ncnc2n[nH]cc12,-1.0,1.3642469579366658,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0242,Cn1cnc2[nH]ncc2c1=N,Cn1cnc2nncc-2c1N,0.6,-0.8185481747619995,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0243,Nc1ncnc2[nH]cnc12,Nc1ncnc2nc[nH]c12,-1.2,1.637096349523999,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0244,Cn1cnc2[nH]cnc2c1=N,Cn1cnc2ncnc-2c1N,2.0,-2.7284939158733317,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0245,O=[N+]([O-])c1cnc[nH]1,O=[N+]([O-])c1c[nH]cn1,2.68,-3.6561818472702647,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0246,Brc1cnc[nH]1,Brc1c[nH]cn1,2.0,-2.7284939158733317,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0247,Clc1cnc[nH]1,Clc1c[nH]cn1,1.65,-2.2510074805954985,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0248,c1ccc(-c2cnc[nH]2)cc1,c1ccc(-c2c[nH]cn2)cc1,1.3,-1.7735210453176657,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0249,O=[N+]([O-])c1[nH]cnc1Cl,O=[N+]([O-])c1nc[nH]c1Cl,2.07,-2.823991202928898,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0250,Cc1nnc2[nH]c3ccccc3n12,Cc1n[nH]c2nc3ccccc3n12,-3.2,4.365590265397331,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0251,C/N=C(/C)O,CNC(C)=O,9.1,-12.41464731722366,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0252,OC1=NCCCC1,O=C1CCCCN1,7.6,-10.36827688031866,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0253,OC1=NCCC1,O=C1CCCN1,7.0,-9.54972870555666,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0254,OC1=NCCC=C1,O=C1C=CCCN1,7.1,-9.686153401350326,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0255,OC1=NC=CCC1,O=C1CCC=CN1,5.5,-7.503358268651662,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0256,OC1=NC=CC1,O=C1CC=CN1,4.9,-6.684810093889663,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0257,OC1=NCC=C1,O=C1C=CCN1,6.5,-8.867605226588328,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0258,Oc1ccccn1,O=c1cccc[nH]1,3.5,-4.77486435277833,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0259,Cc1ccc(O)nc1,Cc1ccc(=O)[nH]c1,3.6,-4.911289048571997,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0260,Cc1cccc(O)n1,Cc1cccc(=O)[nH]1,3.6,-4.911289048571997,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0261,COc1cccc(O)n1,COc1cccc(=O)[nH]1,1.46,-1.991800558587532,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0262,Oc1cccnc1O,O=c1[nH]cccc1O,2.9,-3.9563161780163307,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0263,Oc1cccc(O)n1,O=c1cccc(O)[nH]1,1.3,-1.7735210453176657,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0264,Oc1ccc(Br)cn1,O=c1ccc(Br)c[nH]1,2.2,-3.0013433074606652,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0265,Oc1ncc(Br)cc1Br,O=c1[nH]cc(Br)cc1Br,1.95,-2.660281567976498,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0266,Oc1ccc(Cl)cn1,O=c1ccc(Cl)c[nH]1,2.25,-3.0695556553574983,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0267,Oc1ncc(Cl)cc1Cl,O=c1[nH]cc(Cl)cc1Cl,2.1,-2.8649186116669982,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0268,Oc1cccc(Cl)n1,O=c1cccc(Cl)[nH]1,1.05,-1.4324593058334991,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0269,Oc1cccc(I)n1,O=c1cccc(I)[nH]1,2.6,-3.5470420906353315,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0270,O=[N+]([O-])c1ccc(O)nc1,O=c1ccc([N+](=O)[O-])c[nH]1,1.3,-1.7735210453176657,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0271,Nc1ccnc(O)c1,Nc1cc[nH]c(=O)c1,5.4,-7.366933572857996,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0272,Nc1cccc(O)n1,Nc1cccc(=O)[nH]1,3.3,-4.502014961190997,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0273,Oc1ccc2ccccc2n1,O=c1ccc2ccccc2[nH]1,4.5,-6.139111310714997,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0274,Oc1nccc2ccccc12,O=c1[nH]ccc2ccccc12,5.3,-7.230508877064329,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0275,Oc1cnccn1,O=c1cncc[nH]1,1.9,-2.592069220079665,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0276,Oc1cnc2ccccc2n1,O=c1cnc2ccccc2[nH]1,2.7,-3.683466786428998,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0277,Cn1c(=O)c2ncc(O)nc2n(C)c1=O,Cn1c(=O)c2ncc(=O)[nH]c2n(C)c1=O,-0.75,1.0231852184524994,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0278,Oc1cccnn1,O=c1cccn[nH]1,5.1,-6.957659485476995,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0279,C[n+]1cc2ccccc2c(O)n1,C[n+]1cc2ccccc2c(=O)[nH]1,0.7,-0.954972870555666,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0280,Oc1nncc2ccccc12,O=c1[nH]ncc2ccccc12,6.8,-9.276879313969328,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0281,Oc1cc2ccccc2nn1,O=c1cc2ccccc2n[nH]1,3.1,-4.229165569603664,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0282,O=c1[nH]c(=O)c2ncc(O)nc2[nH]1,O=c1cnc2c(=O)[nH]c(=O)[nH]c2[nH]1,-0.75,1.0231852184524994,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0283,N=C(N)O,NC(N)=O,10.3,-14.05174366674766,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0284,O=c1nc(O)cc[nH]1,O=c1cc[nH]c(=O)[nH]1,4.6,-6.275536006508663,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0285,O=c1ccnc(O)[nH]1,O=c1cc[nH]c(=O)[nH]1,5.8,-7.9126323560326615,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0286,O=c1[nH]c(O)nc2ccccc12,O=c1[nH]c(=O)c2ccccc2[nH]1,6.8,-9.276879313969328,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0287,CC1=NNC(=O)C1,Cc1cc(O)[nH]n1,0.0,-0.0,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0288,CC1=NNC(=O)C1,Cc1cc(=O)[nH][nH]1,2.1,-2.8649186116669982,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0289,Cc1cc(O)[nH]n1,Cc1cc(=O)[nH][nH]1,2.1,-2.8649186116669982,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0290,Cc1cc(O)n[nH]1,Cc1cc(=O)[nH][nH]1,0.9,-1.2278222621429993,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0291,Cc1cc(O)[nH]n1,Cc1cc(O)n[nH]1,1.2,-1.637096349523999,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0292,Cc1cc(O)n(C)n1,Cc1cc(=O)n(C)[nH]1,1.7,-2.319219828492332,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0293,Cc1onc(O)c1C,Cc1o[nH]c(=O)c1C,-0.2,0.2728493915873332,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0294,Cn1ccc(=N)[nH]c1=O,Cn1ccc(N)nc1=O,4.1,-5.5934125275403295,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0295,Cn1cc/c(=N\N)[nH]c1=O,Cn1ccc(NN)nc1=O,1.5,-2.046370436904999,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0296,Cn1cc/c(=N\O)[nH]c1=O,Cn1ccc(NO)nc1=O,-1.1,1.5006716537303326,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0297,Oc1cc(-c2ccccc2)sn1,O=c1cc(-c2ccccc2)s[nH]1,0.5,-0.6821234789683329,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0298,O=c1[nH]nc(O)c2ccccc12,O=c1[nH][nH]c(=O)c2ccccc12,1.0,-1.3642469579366658,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0299,O=c1[nH]c(=O)n(-c2ccccc2)[nH]1,O=c1[nH]c(O)nn1-c1ccccc1,-1.7,2.319219828492332,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0300,Sc1ccccn1,S=c1cccc[nH]1,4.6,-6.275536006508663,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0301,Sc1cccc(Cl)n1,S=c1cccc(Cl)[nH]1,0.76,-1.036827688031866,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0302,Sc1ccc2ccccc2n1,S=c1ccc2ccccc2[nH]1,5.1,-6.957659485476995,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0303,Sc1nccc2ccccc12,S=c1[nH]ccc2ccccc12,5.7,-7.776207660238995,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0304,Sc1cc2ccccc2cn1,S=c1cc2ccccc2c[nH]1,2.9,-3.9563161780163307,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0305,Sc1cnccn1,S=c1cncc[nH]1,1.1,-1.5006716537303326,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0306,Sc1cnc2ccccc2n1,S=c1cnc2ccccc2[nH]1,1.4,-1.909945741111332,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0307,Sc1cccnn1,S=c1cccn[nH]1,5.2,-7.094084181270663,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0308,Sc1nncc2ccccc12,S=c1[nH]ncc2ccccc12,6.8,-9.276879313969328,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0309,N=C(N)S,NC(N)=S,11.0,-15.006716537303324,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0310,Cc1nc(S)n(C)c1C,Cc1[nH]c(=S)n(C)c1C,8.0,-10.913975663493327,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0311,Cc1nc(S)oc1C,Cc1[nH]c(=S)oc1C,6.3,-8.594755835000994,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0312,Cc1nc(S)sc1C,Cc1[nH]c(=S)sc1C,6.0,-8.185481747619995,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0313,Cc1cc(S)n(-c2ccccc2)n1,Cc1cc(=S)n(-c2ccccc2)[nH]1,1.6,-2.1827951326986654,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0314,Cc1cc(S)n(C)n1,Cc1cc(=S)n(C)[nH]1,2.2,-3.0013433074606652,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0315,Sc1ccc(S)nn1,S=c1ccc(S)n[nH]1,4.1,-5.5934125275403295,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0316,Nc1ccccn1,N=c1cccc[nH]1,-6.5,8.867605226588328,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0317,c1ccc(Nc2ccccn2)cc1,c1ccc(/N=c2\cccc[nH]2)cc1,-4.6,6.275536006508663,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0318,CC(=O)Nc1ccccn1,CC(=O)/N=c1\cccc[nH]1,-3.3,4.502014961190997,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0319,O=C(Nc1ccccn1)C(Cl)Cl,O=C(/N=c1\cccc[nH]1)C(Cl)Cl,-1.9,2.592069220079665,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0320,O=C(Nc1ccccn1)C(Cl)(Cl)Cl,O=C(/N=c1\cccc[nH]1)C(Cl)(Cl)Cl,-1.0,1.3642469579366658,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0321,CS(=O)(=O)Nc1ccccn1,CS(=O)(=O)/N=c1\cccc[nH]1,0.8,-1.0913975663493327,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0322,O=S(=O)(Nc1ccccn1)c1ccccc1,O=S(=O)(/N=c1\cccc[nH]1)c1ccccc1,1.8,-2.4556445242859986,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0323,Nc1ccc2ccccc2n1,N=c1ccc2ccccc2[nH]1,-4.6,6.275536006508663,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0324,O=C(Nc1ccc2ccccc2n1)C(Cl)(Cl)Cl,O=C(/N=c1\ccc2ccccc2[nH]1)C(Cl)(Cl)Cl,-0.5,0.6821234789683329,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0325,Nc1nccc2ccccc12,N=c1[nH]ccc2ccccc12,-4.1,5.5934125275403295,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0326,Nc1nc2ccccc2c2ccccc12,N=c1[nH]c2ccccc2c2ccccc12,-3.1,4.229165569603664,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0327,Nc1cc2ccccc2nn1,N=c1cc2ccccc2n[nH]1,-9.0,12.278222621429993,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0328,Nc1ncccn1,N=c1nccc[nH]1,-7.5,10.231852184524994,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0329,Nc1cccnn1,N=c1cccn[nH]1,-4.1,5.5934125275403295,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0330,Nc1nncc2ccccc12,N=c1[nH]ncc2ccccc12,0.5,-0.6821234789683329,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0331,Nc1cnc2ccccc2n1,N=c1cnc2ccccc2[nH]1,-8.5,11.596099142461659,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0332,Nc1cnccn1,N=c1cncc[nH]1,-10.5,14.324593058334992,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0333,Nc1nccs1,N=c1[nH]ccs1,-4.5,6.139111310714997,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0334,c1ccc(CNc2nccs2)cc1,c1ccc(C/N=c2/[nH]ccs2)cc1,-4.1,5.5934125275403295,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0335,c1ccc(Nc2nccs2)cc1,c1ccc(/N=c2/[nH]ccs2)cc1,-2.3,3.1377680032543314,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0336,Cc1ccc(S(=O)(=O)Nc2nccs2)cc1,Cc1ccc(S(=O)(=O)/N=c2/[nH]ccs2)cc1,1.6,-2.1827951326986654,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0337,Nc1nc2c(o1)CCCC2,N=c1[nH]c2c(o1)CCCC2,-4.3,5.866261919127663,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0338,Nc1nc2c(s1)CCCC2,N=c1[nH]c2c(s1)CCCC2,-3.7,5.047713744365664,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0339,Nc1nc2ccccc2s1,N=c1[nH]c2ccccc2s1,-4.0,5.456987831746663,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0340,Cn1c(N)nc2ccccc21,Cn1c(=N)[nH]c2ccccc21,-2.6,3.5470420906353315,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0341,Cn1c(N)nc(-c2ccccc2)c1-c1ccccc1,Cn1c(-c2ccccc2)c(-c2ccccc2)[nH]c1=N,-3.5,4.77486435277833,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0342,Cn1c(N)nc2cc3ccccc3cc21,Cn1c(=N)[nH]c2cc3ccccc3cc21,-2.2,3.0013433074606652,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0343,Cn1c(N)nc2c3ccccc3ccc21,Cn1c(=N)[nH]c2c3ccccc3ccc21,-2.8,3.819891482222664,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0344,c1ccc(Nc2nnco2)cc1,c1ccc(/N=c2/[nH]nco2)cc1,-4.0,5.456987831746663,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0345,Nc1nnc(-c2ccccc2)o1,N=c1[nH]nc(-c2ccccc2)o1,-5.5,7.503358268651662,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0346,CNc1nnc(-c2ccccc2)o1,C/N=c1/[nH]nc(-c2ccccc2)o1,-6.0,8.185481747619995,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0347,c1ccc(Nc2nnc(-c3ccccc3)o2)cc1,c1ccc(/N=c2/[nH]nc(-c3ccccc3)o2)cc1,-3.6,4.911289048571997,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0348,c1ccc(Nc2nncs2)cc1,c1ccc(/N=c2/[nH]ncs2)cc1,-3.4,4.638439656984664,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0349,Nc1nnc(-c2ccccc2)s1,N=c1[nH]nc(-c2ccccc2)s1,-5.5,7.503358268651662,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0350,c1ccc(Nc2nnc(-c3ccccc3)s2)cc1,c1ccc(/N=c2/[nH]nc(-c3ccccc3)s2)cc1,-2.9,3.9563161780163307,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0351,Nc1nc(-c2ccccc2)no1,N=c1[nH]c(-c2ccccc2)no1,-6.5,8.867605226588328,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0352,CNc1nc(-c2ccccc2)no1,C/N=c1/[nH]c(-c2ccccc2)no1,-6.9,9.413304009762994,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0353,Nc1ncn[nH]1,N=c1[nH]cn[nH]1,-6.5,8.867605226588328,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0354,Cn1nnnc1N,Cn1nn[nH]c1=N,-7.4,10.095427488731328,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0355,CNc1nnnn1C,C/N=c1/[nH]nnn1C,-9.6,13.096770796191992,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0356,CC(=N)NC(C)=O,CC(=O)/N=C(/C)N,2.8,-3.819891482222664,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0357,CC(=O)NC(=N)N,CC(=O)N=C(N)N,3.1,-4.229165569603664,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0358,CC(=O)NC1=NCCN1C,CC(=O)/N=C1\NCCN1C,2.7,-3.683466786428998,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0359,CC(=O)Nc1ccccc1,CC(=O)/N=C1\C=CC=CC1,-3.3,4.502014961190997,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0360,O=C(Nc1ccccc1)c1ccccc1,O=C(/N=C1\C=CC=CC1)c1ccccc1,-3.3,4.502014961190997,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0361,O=C(Nc1ccccc1)C(Cl)Cl,O=C(/N=C1\C=CC=CC1)C(Cl)Cl,-1.9,2.592069220079665,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0362,O=C(Nc1ccccc1)C(Cl)(Cl)Cl,O=C(/N=C1\C=CC=CC1)C(Cl)(Cl)Cl,-1.0,1.3642469579366658,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0363,O=C(Nc1ccccc1)C(F)(F)F,O=C(/N=C1\C=CC=CC1)C(F)(F)F,0.1,-0.1364246957936666,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0364,CC(=O)Nc1nccs1,CC(=O)/N=c1/[nH]ccs1,-1.0,1.3642469579366658,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0365,O=C(Nc1nccs1)C(F)(F)F,O=C(/N=c1/[nH]ccs1)C(F)(F)F,1.3,-1.7735210453176657,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0366,O=C(Nc1nccs1)C(Cl)Cl,O=C(/N=c1/[nH]ccs1)C(Cl)Cl,-0.3,0.40927408738099974,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0367,O=C(Nc1nncs1)C(Cl)Cl,O=C(/N=c1/[nH]ncs1)C(Cl)Cl,0.2,-0.2728493915873332,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0368,O=C(Nc1nccs1)C(Cl)(Cl)Cl,O=C(/N=c1/[nH]ccs1)C(Cl)(Cl)Cl,1.3,-1.7735210453176657,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0369,O=C(Nc1nc2ccccc2s1)C(Cl)(Cl)Cl,O=C(/N=c1/[nH]c2ccccc2s1)C(Cl)(Cl)Cl,1.5,-2.046370436904999,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0370,O=C(Nc1nncs1)C(Cl)(Cl)Cl,O=C(/N=c1/[nH]ncs1)C(Cl)(Cl)Cl,1.6,-2.1827951326986654,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0371,Cn1nnnc1NC(=O)C(Cl)(Cl)Cl,Cn1nn[nH]/c1=N/C(=O)C(Cl)(Cl)Cl,0.0,-0.0,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0372,O=C1NC=NC12CCCCC2,O=C1N=CNC12CCCCC2,-0.3,0.40927408738099974,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0373,O=C1NC=NC1(c1ccccc1)c1ccccc1,O=C1N=CNC1(c1ccccc1)c1ccccc1,-0.4,0.5456987831746664,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0374,CSC1=NC2(CCCCC2)C(=O)N1,CSC1=NC(=O)C2(CCCCC2)N1,1.0,-1.3642469579366658,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0375,NC1=NC2(CCCCC2)C(=O)N1,NC1=NC(=O)C2(CCCCC2)N1,3.3,-4.502014961190997,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0376,Cc1ncc(C)c(O)n1,Cc1ncc(C)c(=O)[nH]1,2.0,-2.7284939158733317,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0377,Cc1nccc(O)n1,Cc1nccc(=O)[nH]1,1.86,-2.5374993417621985,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0378,COc1cnc(C)nc1O,COc1cnc(C)[nH]c1=O,1.83,-2.4965719330240987,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0379,Cc1ncc(C(N)=O)c(O)n1,Cc1ncc(C(N)=O)c(=O)[nH]1,1.34,-1.8280909236351324,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0380,CCOC(=O)c1cnc(C)nc1O,CCOC(=O)c1cnc(C)[nH]c1=O,1.37,-1.8690183323732323,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0381,Cc1ncc(C#N)c(O)n1,Cc1ncc(C#N)c(=O)[nH]1,1.18,-1.6098114103652656,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0382,Cc1ncc(C)c(O)n1,Cc1nc(=O)c(C)c[nH]1,1.96,-2.673924037555865,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0383,Cc1nccc(O)n1,Cc1nc(=O)cc[nH]1,1.92,-2.6193541592383984,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0384,COc1cnc(C)nc1O,COc1c[nH]c(C)nc1=O,1.76,-2.401074645968532,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0385,Cc1ncc(C(N)=O)c(O)n1,Cc1nc(=O)c(C(N)=O)c[nH]1,1.37,-1.8690183323732323,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0386,CCOC(=O)c1cnc(C)nc1O,CCOC(=O)c1c[nH]c(C)nc1=O,1.25,-1.7053086974208322,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0387,Cc1ncc(C#N)c(O)n1,Cc1nc(=O)c(C#N)c[nH]1,1.13,-1.5415990624684321,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0388,Cc1ncc(C)c(=O)[nH]1,Cc1nc(=O)c(C)c[nH]1,-0.04,0.05456987831746663,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0389,Cc1nccc(=O)[nH]1,Cc1nc(=O)cc[nH]1,0.05,-0.0682123478968333,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0390,COc1cnc(C)[nH]c1=O,COc1c[nH]c(C)nc1=O,-0.07,0.09549728705556662,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0391,Cc1ncc(C(N)=O)c(=O)[nH]1,Cc1nc(=O)c(C(N)=O)c[nH]1,0.03,-0.040927408738099975,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0392,CCOC(=O)c1cnc(C)[nH]c1=O,CCOC(=O)c1c[nH]c(C)nc1=O,-0.12,0.1637096349523999,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0393,Cc1ncc(C#N)c(=O)[nH]1,Cc1nc(=O)c(C#N)c[nH]1,-0.05,0.0682123478968333,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0394,Nc1nncc(=O)[nH]1,Nc1nc(=O)cn[nH]1,2.4,-3.274192699047998,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0395,Cc1nnc(N)[nH]c1=O,Cc1n[nH]c(N)nc1=O,2.34,-3.192337881571798,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0396,Nc1nncc(=O)[nH]1,N=c1[nH]ncc(=O)[nH]1,-2.65,3.6152544385321645,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0397,Cc1nnc(N)[nH]c1=O,Cc1n[nH]c(=N)[nH]c1=O,-2.07,2.823991202928898,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0398,O=c1c2ccccc2nc2n1CCN2,O=C1c2ccccc2NC2=NCCN12,-4.3,5.866261919127663,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0399,O=c1c2ccccc2nc2[nH]cnn12,O=c1c2ccccc2[nH]c2ncnn12,1.6,-2.1827951326986654,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0400,O=c1c2ccccc2nc2[nH]ccn12,O=c1c2ccccc2[nH]c2nccn12,-1.6,2.1827951326986654,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0401,O=c1c2ccccc2nc2[nH]ncn12,O=c1c2ccccc2[nH]c2nncn12,0.8,-1.0913975663493327,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0402,O=c1c2ccccc2nc2n1N=NCN2,O=C1c2ccccc2NC2=NCN=NN12,2.7,-3.683466786428998,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0403,Nc1nnc[nH]1,N=c1[nH]cn[nH]1,-5.5,7.503358268651662,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0404,Nc1ncco1,N=c1[nH]cco1,-5.1,6.957659485476995,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0405,Nc1ncc[nH]1,N=c1[nH]cc[nH]1,-3.1,4.229165569603664,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0406,Oc1ncccn1,O=c1nccc[nH]1,2.2,-3.0013433074606652,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0407,Nc1ccnc(=O)[nH]1,Nc1cc[nH]c(=O)n1,2.6,-3.5470420906353315,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0408,Nc1ccnc(=O)[nH]1,N=c1cc[nH]c(=O)[nH]1,-1.5,2.046370436904999,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0409,Nc1cc[nH]c(=O)n1,N=c1cc[nH]c(=O)[nH]1,-4.1,5.5934125275403295,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0410,NC1=NC(=O)NCC1,N=C1CCNC(=O)N1,-1.2,1.637096349523999,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0411,Nc1cnnc(=O)[nH]1,Nc1cn[nH]c(=O)n1,5.5,-7.503358268651662,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0412,Nc1cn[nH]c(=O)n1,N=c1cn[nH]c(=O)[nH]1,-2.0,2.7284939158733317,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0413,CSC1=NC2(CCCCC2)C(=S)N1,CSC1=NC(=S)C2(CCCCC2)N1,0.8,-1.0913975663493327,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0414,CN(C)c1ccnc(N)n1,CN(C)c1cc[nH]c(=N)n1,-6.0,8.185481747619995,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0415,Nc1ccncn1,N=c1cc[nH]cn1,-6.5,8.867605226588328,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0416,Nc1ccnc(N)n1,N=c1nc(N)cc[nH]1,-5.9,8.04905705182633,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0417,Nc1ccnc(N)n1,N=c1cc[nH]c(N)n1,-5.6,7.639782964445328,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0418,CN(C)c1nccc(N)n1,CN(C)c1nc(=N)cc[nH]1,-5.9,8.04905705182633,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0419,CNc1ccnc(N)n1,CNc1cc[nH]c(=N)n1,-5.7,7.776207660238995,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0420,CNc1ccnc(N)n1,C/N=c1\cc[nH]c(N)n1,-5.4,7.366933572857996,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0421,N=C1Cc2ccccc2N1,NC1=Nc2ccccc2C1,1.4,-1.909945741111332,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0422,Nc1cc2ccccc2cn1,N=c1cc2ccccc2c[nH]1,-10.7,14.597442449922324,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0423,Nc1nc2ccccc2[nH]1,N=c1[nH]c2ccccc2[nH]1,-2.3,3.1377680032543314,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0424,Nc1ncno1,N=c1[nH]cno1,-7.4,10.095427488731328,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0425,Nc1ncns1,N=c1[nH]cns1,-5.7,7.776207660238995,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0426,Nc1nc2ccccc2c(=O)[nH]1,N=c1[nH]c(=O)c2ccccc2[nH]1,-4.7,6.41196070230233,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0427,Nc1nc2ccccc2c(=O)[nH]1,Nc1nc(=O)c2ccccc2[nH]1,-0.9,1.2278222621429993,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0428,Nc1nc(=O)c2ccccc2[nH]1,N=c1[nH]c(=O)c2ccccc2[nH]1,-3.8,5.18413844015933,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0429,O=c1c2ccccc2nc2[nH]c3ccccc3n12,O=c1c2ccccc2[nH]c2nc3ccccc3n12,-2.4,3.274192699047998,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0430,O=c1nc2[nH]ccn2c2ccccc12,O=c1[nH]c2nccn2c2ccccc12,-0.7,0.954972870555666,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0431,O=c1nc2[nH]ncn2c2ccccc12,O=c1[nH]c2nncn2c2ccccc12,1.7,-2.319219828492332,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0432,O=c1nc2[nH]cnn2c2ccccc12,O=c1[nH]c2ncnn2c2ccccc12,2.5,-3.4106173948416645,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0433,O=c1nc2[nH]nnn2c2ccccc12,O=c1[nH]c2nnnn2c2ccccc12,3.6,-4.911289048571997,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0434,O=c1ccnc2[nH]ccn12,O=c1cc[nH]c2nccn12,-3.5,4.77486435277833,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0435,O=c1ccnc2[nH]nnn12,O=c1cc[nH]c2nnnn12,0.8,-1.0913975663493327,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0436,O=c1ccnc(O)[nH]1,O=c1cc[nH]c(O)n1,0.0,-0.0,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0437,Oc1ncnc2ccccc12,O=c1[nH]cnc2ccccc12,5.3,-7.230508877064329,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0438,Oc1cnncn1,O=c1cn[nH]cn1,2.4,-3.274192699047998,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0439,Oc1nccnn1,O=c1nccn[nH]1,5.1,-6.957659485476995,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0440,Oc1ncncn1,O=c1ncnc[nH]1,1.6,-2.1827951326986654,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0441,Oc1cncnn1,O=c1cncn[nH]1,3.5,-4.77486435277833,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0442,Oc1ncc2ccccc2n1,O=c1ncc2ccccc2[nH]1,4.5,-6.139111310714997,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0443,O=c1ncc2ccccc2[nH]1,O=c1nc2ccccc2c[nH]1,-2.1,2.8649186116669982,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0444,Oc1cc[nH]n1,O=c1cc[nH][nH]1,0.0,-0.0,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0445,Cn1ccc(O)n1,Cn1ccc(=O)[nH]1,-0.5,0.6821234789683329,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0446,Oc1ccn(-c2ccccc2)n1,O=c1ccn(-c2ccccc2)[nH]1,-1.0,1.3642469579366658,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0447,Oc1ccon1,O=c1cco[nH]1,-2.0,2.7284939158733317,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0448,Cc1cc(O)no1,Cc1cc(=O)[nH]o1,-1.1,1.5006716537303326,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0449,Cc1[nH]nc(O)c1C,Cc1[nH][nH]c(=O)c1C,1.8,-2.4556445242859986,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0450,Cc1c(O)nn(C)c1C,Cc1c(C)n(C)[nH]c1=O,1.3,-1.7735210453176657,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0451,Cc1c(O)nn(-c2ccccc2)c1C,Cc1c(C)n(-c2ccccc2)[nH]c1=O,0.8,-1.0913975663493327,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0452,Cc1cc(O)on1,Cc1cc(=O)o[nH]1,0.9,-1.2278222621429993,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0453,CC1=NN(C)C(=O)C1,Cc1cc(=O)n(C)[nH]1,1.5,-2.046370436904999,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0454,CC1=NN(C)C(=O)C1,Cc1cc(O)n(C)n1,-0.3,0.40927408738099974,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0455,CC1=NOC(=O)C1,Cc1cc(O)on1,-1.2,1.637096349523999,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0456,OC1=NNCCC1,O=C1CCCNN1,5.1,-6.957659485476995,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0457,OC1=NOCCC1,O=C1CCCON1,2.7,-3.683466786428998,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0458,OC1=NNCC1,O=C1CCNN1,4.5,-6.139111310714997,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0459,OC1=NOCC1,O=C1CCON1,2.1,-2.8649186116669982,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0460,O=C1CCC(O)=NN1,O=C1CCC(=O)NN1,4.5,-6.139111310714997,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0461,C/N=C(\S)c1ccccc1,CNC(=S)c1ccccc1,8.8,-12.005373229842661,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0462,C/N=C(\O)c1ccccc1,CNC(=O)c1ccccc1,8.6,-11.732523838255325,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0463,C=CC(C)=O,C=CC(=C)O,-7.8,10.641126271905993,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0464,CC(=O)C#N,C=C(O)C#N,-5.3,7.230508877064329,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0465,O=C1C=CC=CC1,O=C1C=CCC=C1,2.0,-2.7284939158733317,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0466,O=C1CCCCO1,OC1=CCCCO1,-14.5,19.781580890081656,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0467,O=C(O)CC(=O)O,O=C(O)C=C(O)O,-8.4,11.459674446667993,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0468,O=c1cc(O)cc[nH]1,O=c1cc[nH]c(O)c1,1.7,-2.319219828492332,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0469,CC(=O)C1CCCCC1=O,C/C(O)=C1/CCCCC1=O,-1.1,1.5006716537303326,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0470,CCOC(=O)CC1=NCCS1,CCOC(=O)/C=C1/NCCS1,-0.3,0.40927408738099974,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0471,FC(F)(F)Cc1ccccn1,FC(F)(F)/C=C1\C=CC=CN1,-8.3,11.323249750874327,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0472,NOCCc1ccccn1,NOC/C=C1\C=CC=CN1,-7.3,9.95900279293766,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0473,CS(=O)(=O)Cc1ccccn1,CS(=O)(=O)/C=C1\C=CC=CN1,-7.2,9.822578097143994,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0474,O=S(=O)(Cc1ccccn1)C(F)(F)F,O=S(=O)(/C=C1\C=CC=CN1)C(F)(F)F,-2.6,3.5470420906353315,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0475,COCCc1ccccn1,COC/C=C1\C=CC=CN1,-2.0,2.7284939158733317,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0476,O=CCc1ccccn1,O=C/C=C1\C=CC=CN1,-1.3,1.7735210453176657,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0477,O=C1Cc2cc([N+](=O)[O-])ccc2N1,O=[N+]([O-])c1ccc2[nH]c(O)cc2c1,-6.5,8.867605226588328,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0478,O=C1CC=C(c2ccccc2)S1,Oc1ccc(-c2ccccc2)s1,-1.0,1.3642469579366658,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0479,CC(=O)C1CCCC1=O,CC(=O)C1=C(O)CCC1,-1.5,2.046370436904999,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0480,CC(=O)C1CCCC1=O,C/C(O)=C1\CCCC1=O,-0.9,1.2278222621429993,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0481,O=C1Cc2ccccc2S1,Oc1cc2ccccc2s1,-2.0,2.7284939158733317,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0482,O=C1c2ccccc2OC1c1ccccc1,Oc1c(-c2ccccc2)oc2ccccc12,-0.8,1.0913975663493327,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0483,CC1Oc2ccccc2C1=O,Cc1oc2ccccc2c1O,-1.9,2.592069220079665,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0484,COC1Oc2ccccc2C1=O,COc1oc2ccccc2c1O,-0.5,0.6821234789683329,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0485,Oc1[nH]nc2ccccc12,O=C1NN=C2C=CC=CC12,4.3,-5.866261919127663,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0486,O=C1N=C(c2ccccc2)SC1c1ccccc1,Oc1nc(-c2ccccc2)sc1-c1ccccc1,1.7,-2.319219828492332,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0487,O=C1COC(c2ccccc2)=N1,Oc1coc(-c2ccccc2)n1,-4.0,5.456987831746663,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0488,CC1OC(c2ccccc2)=NC1=O,Cc1oc(-c2ccccc2)nc1O,-2.4,3.274192699047998,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0489,O=C1CNC(c2ccccc2)=N1,Oc1c[nH]c(-c2ccccc2)n1,-2.0,2.7284939158733317,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0490,CC1NC(c2ccccc2)=NC1=O,Cc1[nH]c(-c2ccccc2)nc1O,-0.4,0.5456987831746664,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0491,O=C1N=C(c2ccccc2)NC1c1ccccc1,Oc1nc(-c2ccccc2)[nH]c1-c1ccccc1,0.7,-0.954972870555666,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0492,CC1=NC(=O)CN1,Cc1nc(O)c[nH]1,-3.0,4.092740873809998,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0493,CC1=NC(=O)C(C)N1,Cc1nc(O)c(C)[nH]1,-1.4,1.909945741111332,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0494,CC1=NC(=O)C(c2ccccc2)N1,Cc1nc(O)c(-c2ccccc2)[nH]1,-0.3,0.40927408738099974,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0495,O=c1[nH]cn[nH]1,Oc1nc[nH]n1,-3.9,5.320563135952996,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0496,Oc1ncc2ccccc2n1,O=c1nc2ccccc2c[nH]1,2.4,-3.274192699047998,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0497,O=c1cnnc[nH]1,O=c1cn[nH]cn1,2.0,-2.7284939158733317,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0498,Oc1ccncn1,O=c1ccnc[nH]1,3.5,-4.77486435277833,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0499,Oc1ccncn1,O=c1cc[nH]cn1,3.1,-4.229165569603664,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0500,Oc1ncnc2ccccc12,O=c1nc[nH]c2ccccc12,4.1,-5.5934125275403295,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0501,O=c1nc(O)c2ccccc2[nH]1,O=c1[nH]c(=O)c2ccccc2[nH]1,6.4,-8.731180530794662,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0502,CC/C(C)=N/C,C/C=C(/C)NC,-1.8,2.4556445242859986,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0503,CC/C(=N/C)c1ccccc1,C/C=C(\NC)c1ccccc1,-1.4,1.909945741111332,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0504,Nc1nc(=O)cn[nH]1,N=c1[nH]ncc(=O)[nH]1,-4.5,6.139111310714997,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0505,Nc1nccc(=O)[nH]1,N=c1[nH]ccc(=O)[nH]1,-6.6,9.004029922381994,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0506,Nc1nc(=O)cc[nH]1,N=c1[nH]ccc(=O)[nH]1,-6.6,9.004029922381994,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0507,Nc1cnnc(=O)[nH]1,N=c1cn[nH]c(=O)[nH]1,3.0,-4.092740873809998,2,Tier 2 (Normal Subset),COMFORT_ZONE
+TB_0508,c1cn2cn[nH]c2n1,c1cn2cnnc2[nH]1,2.8,-3.819891482222664,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0509,c1nnc2[nH]nnn12,c1n[nH]c2nnnn12,1.9,-2.592069220079665,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0510,O=C1CCN=C2NC=NN12,O=C1CCNc2ncnn21,6.3,-8.594755835000994,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0511,O=C1CCN2N=CNC2=N1,O=C1CCn2ncnc2N1,3.5,-4.77486435277833,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0512,O=c1nccc2[nH]nnn12,O=c1[nH]ccc2nnnn12,6.0,-8.185481747619995,1,Tier 1 (Golden Subset - Strictly Isodesmic),HIGH_CONFIDENCE
+TB_0513,Nc1nc(O)cs1,N=C1NC(=O)CS1,1.5,-2.046370436904999,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0514,Nc1nc(O)co1,N=C1NC(=O)CO1,4.0,-5.456987831746663,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0515,Nc1nc(O)c[nH]1,N=C1NCC(=O)N1,1.5,-2.046370436904999,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0516,NC1=NC(=O)CS1,Nc1nc(O)cs1,-4.0,5.456987831746663,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0517,NC1=NC(=O)CO1,Nc1nc(O)co1,-7.0,9.54972870555666,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0518,NC1=NC(=O)CN1,Nc1nc(O)c[nH]1,-5.0,6.821234789683329,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0519,CSc1ncc(O)[nH]1,CSC1=NC(=O)CN1,1.0,-1.3642469579366658,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0520,COc1ncc(O)[nH]1,COC1=NC(=O)CN1,2.1,-2.8649186116669982,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0521,Nc1ncc(O)[nH]1,NC1=NC(=O)CN1,3.2,-4.365590265397331,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0522,O=C1CNC=N1,Oc1c[nH]cn1,-3.0,4.092740873809998,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0523,Oc1c[nH]cn1,O=C1CN=CN1,3.5,-4.77486435277833,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
+TB_0524,Nc1nc(O)c[nH]1,NC1=NCC(=O)N1,1.5,-2.046370436904999,3,Tier 3 (Risk Zone - Aromatic Disruption),HIGH_RISK
