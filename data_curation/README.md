@@ -58,8 +58,11 @@ python 07_master_reproduce.py
 Due to GitHub repository file size limits (<100 MB), the full 1.2 GB Frag20 raw pickle archive (`frag20_taut_train.pl`) and the 650 MB full DFT dataset (`taut_25w_1224.csv`) are maintained in the local Data Management Plan (DMP) archive and will be deposited to an institutional repository upon publication, or provided upon request from the author.
 
 Alternatively, researchers can obtain the full, unmodified raw archives directly from their respective primary literature and data repositories:
-- **Frag20-Taut / SPhysNet-Taut**: Primary raw files (`frag20_taut_train.pl`, `frag20_taut_valid.pl`, `frag20_taut_test.pl`) originate from the Frag20 / SPhysNet dataset releases (Huang & von Lilienfeld et al., *J. Chem. Phys.* / *Mach. Learn.: Sci. Technol.*).
-- **TautoBase**: Primary database files (`Tautomer_database_release_3a.xlsx` and raw CSVs) are openly accessible from the official TautoBase repository (Wahl & Sander, *J. Chem. Inf. Model.* 2020, 60, 4172–4189, [DOI: 10.1021/acs.jcim.0c00713](https://doi.org/10.1021/acs.jcim.0c00713)).
-- **SAMPL2 Tautomer Challenge**: The 28 experimental aqueous equilibria are directly traceable from the original SAMPL2 blind challenge literature (Guthrie et al., *J. Comput. Aided Mol. Des.* 2010, 24, 269–281, [DOI: 10.1007/s10822-010-9343-6](https://doi.org/10.1007/s10822-010-9343-6)).
+- **Frag20-Taut / SPhysNet-Taut**: The primary raw pickle partitions (`frag20_taut_train.pl`, `frag20_taut_valid.pl`, `frag20_taut_test.pl`) and DFT reference calculations originate from:
+  > *"Fast and Accurate Prediction of Tautomer Ratios in Aqueous Solution via a Siamese Neural Network"*, *J. Chem. Theory Comput.* 2025, 21 (6), 3132–3142. [ACS JCTC Article Link](https://pubs.acs.org/jctcce/article/21/6/3132/3775827/Fast-and-Accurate-Prediction-of-Tautomer-Ratios-in).
+- **TautoBase**: The primary database files (`Tautomer_database_release_3a.xlsx` and `tautobase_full_raw.csv`) are openly accessible from:
+  > Wahl, J.; Sander, T. *"TautoBase: An Open Tautomer Database"*, *J. Chem. Inf. Model.* 2020, 60 (9), 4172–4189. [DOI: 10.1021/acs.jcim.0c00713](https://doi.org/10.1021/acs.jcim.0c00713).
+- **SAMPL2 Tautomer Blind Challenge**: The 28 experimental aqueous equilibria originate from:
+  > Geballe, M. T.; Guthrie, J. P. *"The SAMPL2 blind prediction challenge: introduction and overview"*, *J. Comput. Aided Mol. Des.* 2010, 24 (4), 259–279. [DOI: 10.1007/s10822-010-9350-8](https://link.springer.com/article/10.1007/s10822-010-9350-8).
 
 A representative 1,000-molecule subset (`raw_data/frag20_taut/frag20_taut_sample_1000.csv`) as well as the complete raw TautoBase (`tautobase_full_raw.csv`) and SAMPL2 (`samplr2_final.csv`) datasets are included directly in this directory for immediate out-of-the-box execution.
