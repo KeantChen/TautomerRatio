@@ -53,8 +53,13 @@ python 07_master_reproduce.py
 
 ---
 
-## Data Provenance & Large File Availability
+## Data Provenance & Original Data Sources
 
-Due to GitHub repository file size limits (<100 MB), the full 1.2 GB Frag20 raw pickle archive (`frag20_taut_train.pl`) and the 650 MB full DFT dataset (`taut_25w_1224.csv`) are maintained in the local Data Management Plan (DMP) archive and will be deposited to an institutional repository (e.g., Zenodo / McGill Dataverse) upon publication, or provided upon request from the author.
+Due to GitHub repository file size limits (<100 MB), the full 1.2 GB Frag20 raw pickle archive (`frag20_taut_train.pl`) and the 650 MB full DFT dataset (`taut_25w_1224.csv`) are maintained in the local Data Management Plan (DMP) archive and will be deposited to an institutional repository upon publication, or provided upon request from the author.
+
+Alternatively, researchers can obtain the full, unmodified raw archives directly from their respective primary literature and data repositories:
+- **Frag20-Taut / SPhysNet-Taut**: Primary raw files (`frag20_taut_train.pl`, `frag20_taut_valid.pl`, `frag20_taut_test.pl`) originate from the Frag20 / SPhysNet dataset releases (Huang & von Lilienfeld et al., *J. Chem. Phys.* / *Mach. Learn.: Sci. Technol.*).
+- **TautoBase**: Primary database files (`Tautomer_database_release_3a.xlsx` and raw CSVs) are openly accessible from the official TautoBase repository (Wahl & Sander, *J. Chem. Inf. Model.* 2020, 60, 4172–4189, [DOI: 10.1021/acs.jcim.0c00713](https://doi.org/10.1021/acs.jcim.0c00713)).
+- **SAMPL2 Tautomer Challenge**: The 28 experimental aqueous equilibria are directly traceable from the original SAMPL2 blind challenge literature (Guthrie et al., *J. Comput. Aided Mol. Des.* 2010, 24, 269–281, [DOI: 10.1007/s10822-010-9343-6](https://doi.org/10.1007/s10822-010-9343-6)).
 
 A representative 1,000-molecule subset (`raw_data/frag20_taut/frag20_taut_sample_1000.csv`) as well as the complete raw TautoBase (`tautobase_full_raw.csv`) and SAMPL2 (`samplr2_final.csv`) datasets are included directly in this directory for immediate out-of-the-box execution.
